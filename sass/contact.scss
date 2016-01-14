@@ -1,0 +1,117 @@
+section#contact {
+  background:$b-blue;
+  //color:white;
+  padding: 60px $mob-margin 40px $mob-margin;
+  @media($dt) {
+    padding:55rem 25rem 40rem 110rem;
+  }
+  a {
+    color:white;
+  }
+  .main-content {
+    @media($dt) {
+      float:left;
+      width: percentage(765/1065);
+    }
+    .heading {
+      h2 {
+        font-size:35px;
+        letter-spacing:-.01em;
+        margin-bottom: 1em;
+        @media($dt) {
+          font-size:40rem;
+          height:60rem;
+          margin:0;
+        }
+      }
+    }
+  }
+
+  #contact-list {
+    @media($dt) {
+      margin-bottom:15rem;
+    }
+    > li {
+      margin-bottom:30px;
+      font-family: $din;
+      color:white;
+      font-size:18px;
+      line-height:1em;
+      @media($dt) {
+        float:left;
+        margin: 0 60rem 20rem 0;
+        font-size:18rem;
+
+      }
+      &:last-child {
+        margin-bottom:0;
+      }
+      h3 {
+        color:white;
+        font-size:24px;
+        line-height:1em;
+        margin-bottom:.25em;
+        @media($dt) {
+          font-size:24rem;
+        }
+        span {
+          display:inline-block;
+          border-bottom:4px solid $b-orange;
+          @media($dt) {
+            border-width:4rem;
+          }
+        }
+      }
+    }
+  }
+  .ownership {
+    padding-top:50px;
+    @media($dt) {
+      padding:0;
+    }
+    h1 {
+      font-size:40px;
+      margin-bottom:.5em;
+      @media($dt) {
+        font-size:40rem;
+      }
+    }
+    a {
+      font-family: $din;
+      font-size: 18px;
+      display:inline-block;
+      @media($dt) {
+        font-size:18rem;
+      }
+    }
+  }
+  .bottom-logos {
+
+    position:relative;
+    margin-top: 60px;
+    width: 100% + ($mob-margin*2);
+    left: -($mob-margin);
+    text-align: center;
+    letter-spacing:-4px;
+    margin-bottom:-12px;
+    @media($dt) {
+      margin:0;
+      float:right;
+      position:static;
+      padding-top:60rem;
+      width: percentage((1065 - 765)/1065);
+      text-align:left;
+    }
+    > li {
+      display:inline-block;
+      vertical-align:middle;
+      margin: 0 6px 12px 6px ;
+      @media($dt) {
+        margin:0 25rem 40rem 0;
+      }
+      a {
+        display:block;
+      }
+    }
+  }
+}

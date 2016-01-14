@@ -1,0 +1,218 @@
+*, *:before, *:after {
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+body {
+  font-family: $serif;
+  font-size:18px;
+
+  line-height: $line-height-base;
+  color: $main-color;
+  background-color: $body-bg;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased!important;
+  -webkit-text-size-adjust: none;
+  color: $b-orange;
+  background: lighten(#bababa,22%);
+  @media($dt) {
+    font-size:18rem;
+  }
+}
+
+html {
+  &.__site-loading, &.__modal-opened {
+    overflow-y:hidden;
+  }
+}
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+textarea {
+  resize: none;
+}
+// Links
+a {
+  text-decoration: none;
+  color: white;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+}
+a, a:hover, a:active, a:focus {
+  outline: 0;
+}
+
+// Figures
+//
+// We reset this here because previously Normalize had no `figure` margins. This
+// ensures we don't break anyone's use of the element.
+
+// IMGS
+img, picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+svg {
+  display: block;
+  max-width:100%;
+}
+
+.header-styling {
+  font-family: $din;
+  text-transform:uppercase;
+  line-height:1em;
+}
+
+//TYPE
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $din;
+  text-transform:uppercase;
+  font-size: 60px;
+  line-height:(48em/60);
+  font-weight:normal;
+  @media($dt) {
+    font-size: 72rem;
+    line-height:(60/72);
+  }
+  strong {
+    font-weight:normal;
+    position:relative;
+    display:inline-block;
+    &:after {
+      display:block;
+      content:'';
+      width: 100%;
+      height: 5px;
+      background: $b-orange;
+      left: 0;
+      bottom: -15px;
+    }
+    @media($dt) {
+      border-bottom: (6rem) solid $b-orange;
+      &:after {
+        display:none;
+      }
+
+    }
+  }
+}
+
+
+
+//TYPE STUFF
+ul, p, ol {
+  margin-bottom: 1.0em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+ul.no-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 0;
+    padding:0;
+    @media($dt) {
+      padding-left:0;
+    }
+    &:before {
+      display:none;
+    }
+  }
+}
+ol, ul {
+  margin: 0;
+  margin-bottom: 1.5em;
+  padding: 0;
+  list-style:none;
+  > li {
+    margin-bottom: 1em;
+    position: relative;
+    padding-left: 16px;
+    @media($dt) {
+      padding-left:16rem;
+    }
+    &:before {
+      position:absolute;
+      display:block;
+      content:'';
+      left: 0;
+      top: 7px;
+      width:7px;
+      height: 7px;
+      background:white;
+      @media($dt) {
+        top:7rem;
+        width:7rem;
+        height:7rem;
+      }
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+blockquote {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  border: 0;
+  color: inherit;
+  font-style: italic;
+
+  p,
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Note: Deprecated small and .small as of v3.1.0
+  // Context: https://github.com/twbs/bootstrap/issues/11660
+  footer,
+  small,
+  .small {
+    display: block;
+    font-size: 80%; // back to default font-size
+    &:before {
+    }
+  }
+}
+
+
+#main-container {
+  position:relative;
+  overflow-x:hidden;
+  overflow-y:auto;
+  max-width: 800px;
+  margin: 0 auto;
+  background:white;
+  //box-shadow: 0 0 5px rgba(black,.2);
+  @media($dt) {
+    max-width: 1600px;
+    //max-width:none;
+  }
+  > * {
+
+  }
+}

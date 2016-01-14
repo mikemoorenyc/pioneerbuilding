@@ -1,0 +1,52 @@
+.top-copy {
+  .heading {
+    padding: 40px $mob-margin;
+    background: $b-blue;
+  }
+  .content {
+    background:$b-orange;
+    color:white;
+    font-family: $din;
+    text-transform:uppercase;
+    font-size:32px;
+    line-height: (34em/32);
+    padding: 40px $mob-margin;
+  }
+  @media($dt) {
+    padding: 35rem 0;
+    position:relative;
+    >.inner {
+      min-height: (400rem - (35rem*2));
+    }
+    .heading,.content {
+      background:none;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      width: percentage(284/600);
+      padding:0;
+    }
+    .left-wrap {
+      position:absolute;
+      left: 0;
+      top: 0;
+      width:50%;
+      height:100%;
+      background:$b-blue;
+
+    }
+    .right-wrap {
+      position:absolute;
+      right: 0;
+      top: 0;
+      width:50%;
+      height:100%;
+      background: $b-orange;
+      .content {
+        font-size:32rem;
+        width:percentage(442/600);  
+      }
+    }
+  }
+}

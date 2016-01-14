@@ -1,0 +1,29 @@
+.btn-class {
+  width:35px;
+  height: 41px;
+  background:$b-blue;
+  svg {
+    position:absolute;
+    width: 19px;
+    height: 19px;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    * {
+      fill: $b-orange;
+    }
+  }
+  &.prev {
+    svg {
+      transform: translate(-50%,-50%) rotate(180deg)  ;
+    }
+  }
+  @media($dt) {
+    width:62rem;
+    height:62rem;
+    svg {
+      width:24rem;
+      height:24rem;
+    }
+  }
+}

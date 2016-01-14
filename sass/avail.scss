@@ -1,0 +1,115 @@
+section#availabilities {
+  padding: 65px 0 35px;
+  h1 {
+    position:relative;
+    letter-spacing:-.01em;
+    margin: 0 $mob-margin;
+    .number {
+      display:block;
+      font-size:145px;
+      line-height:.8em;
+    }
+    .words {
+      position:absolute;
+      left: 122px;
+      top: -10px;
+      line-height:1em;
+      > span {
+        display:block;
+        strong {
+          border-bottom:5px solid $b-orange;
+          line-height:.65em;
+          &:after {
+            display:none;
+          }
+        }
+      }
+    }
+  }
+  .building-layout {
+    padding-top:20px;
+    img.mob-building {
+      max-width: percentage(310/320);
+    }
+  }
+  ul.avail-list {
+    padding: 26px $mob-margin 0;
+    > li {
+      margin-bottom:5px;
+      letter-spacing:-4px;
+      &:last-child {
+        margin: 0;
+      }
+      > a {
+        display:block;
+      }
+      span {
+        display:inline-block;
+        vertical-align:middle;
+        letter-spacing:normal;
+        text-align:right;
+        &.num {
+          color: $b-blue;
+
+          width:5%;
+          font-size:20px;
+
+        }
+        &.rsf {
+          font-size:20px;
+          width: 40%;
+          color:$b-orange;
+
+        }
+        &.view {
+          width: 54%;
+          text-align:left;
+          padding-left:30px;
+color:$b-orange;
+
+        }
+      }
+      &.fl-1 {
+        >span.num {
+          display:block;
+          width: auto;
+          text-align:left;
+        }
+        >span.rsf {
+          margin-left: 5%;
+        }
+      }
+    }
+  }
+  .bottom-section {
+    padding: 30px $mob-margin 0;
+    position: relative;
+    > * {
+      float:left;
+      width:50%;
+      padding-right:10px;
+      &:last-child {
+        padding: 0 0 0 10px;
+      }
+    }
+
+    .tf-list, .downloads {
+      > li {
+        margin-bottom:25px;
+        &:last-child {
+          margin: 0;
+        }
+        a {
+          color:$b-blue;
+          font-size:24px;
+          @media($dt) {
+            font-size:24rem;
+          }
+        }
+      }
+    }
+    .downloads > li a {
+      color: $b-orange;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+section#future {
+  .top-copy {
+    .left-wrap {
+      background:white;
+    }
+  }
+  .map-section {
+    position:relative;
+    .copy {
+      padding: 40px $mob-margin 50px $mob-margin;
+      @media($dt) {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: percentage(280/1200);
+        background: url(#{$imgDir}/future-dt-bg.png) bottom center no-repeat;
+        background-size: 100% auto;
+        padding: 20rem 20rem 40rem 20rem;
+      }
+      h2 {
+        margin-bottom:.5em;
+        @media($dt) {
+          font-size:36rem;
+          margin-bottom:.75em;
+          strong {
+            border-width:4rem;
+          }
+        }
+      }
+      .future-points {
+        li {
+          margin-bottom:1em;
+          font-size: 30px;
+          color: $b-blue;
+          @media($dt) {
+            margin-bottom:12rem;
+          }
+          h3 {
+            font-size:48px;
+            @media($dt) {
+              font-size:26.8rem;
+            }
+          }
+          h4 {
+            font-size:30px;
+            line-height:normal;
+            text-transform:none;
+            @media($dt) {
+              font-size:16.75rem;
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .disc {
+        margin-top: 45px;
+        position: relative;
+        width:226px;
+        color:$b-blue;
+        font-family:$din;
+        font-size:18px;
+        padding-top:5px;
+        @media($dt) {
+          margin-top: 15rem;
+          padding: 0 0 0 30rem;
+          font-size: 12rem;
+          width:185rem;
+          padding-top:4rem;
+          line-height: (13.4em/12);
+        }
+        &:after {
+          display:block;
+          content:'';
+          position:absolute;
+          right:-43px;
+          top: 0;
+          width:30px;
+          height: 48px;
+          background:url(#{$imgDir}/build-icon.png);
+          background-size: 100% 100%;
+          @media($dt) {
+            left: 0;
+            top: 0;
+            right: auto;
+            width:21rem;
+            height: 33rem;
+          }
+        }
+      }
+    }
+  }
+}

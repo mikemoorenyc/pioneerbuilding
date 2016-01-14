@@ -1,0 +1,133 @@
+#modal {
+
+  display:none;
+  position:fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background:white;
+  z-index:9999;
+  overflow:hidden;
+  .main-content-area {
+    opacity:0;
+    transition:opacity $ts;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 100%;
+    &.__loaded {
+      opacity:1;
+    }
+  }
+  &.gal {
+    .gallery-container {
+      position:relative;
+      height:100%;
+      .slick-list, .slick-track, .slide {
+        position: relative;
+        height:100%;
+      }
+      button {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+
+        &.slick-prev {
+          right: auto;
+          left: 0;
+
+        }
+
+      }
+    }
+  }
+  a.modal-close {
+    position:absolute;
+    right: 0;
+    top: 0;
+  }
+  img {
+    max-width:100%;
+    max-height:100%;
+    width: auto;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+  }
+  .caption {
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    background:rgba(black,.8);
+    color:white;
+    font-size: 12px;
+    padding: 10px;
+    width:100%;
+    text-align: center;
+    @media($dt) {
+      font-size:15rem;
+      padding:15rem;
+    }
+  }
+
+  .loader-container {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+  }
+
+
+  .loader,
+  .loader:before,
+  .loader:after {
+    background: $b-grey;
+    -webkit-animation: load1 1s infinite ease-in-out;
+    animation: load1 1s infinite ease-in-out;
+    width: 1em;
+    height: 4em;
+  }
+  .loader:before,
+  .loader:after {
+    position: absolute;
+    top: 0;
+    content: '';
+  }
+  .loader:before {
+    left: -1.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  .loader {
+    text-indent: -9999em;
+    margin: 88px auto;
+    position: relative;
+    font-size: 11px;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  .loader:after {
+    left: 1.5em;
+  }
+}
+
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 $b-grey;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em $b-grey;
+    height: 5em;
+  }
+}

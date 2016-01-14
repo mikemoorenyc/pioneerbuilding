@@ -1,0 +1,111 @@
+section#building {
+  .gallery {
+    background: $b-orange;
+    button {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+
+      &.slick-prev {
+        right: auto;
+        left: 0;
+
+      }
+      
+    }
+    .slide {
+      position:relative;
+      img {
+        width:100%;
+      }
+      .caption {
+        position:absolute;
+        left: 0;
+        bottom: 0;
+        background:rgba(black,.8);
+        color:white;
+        font-size: 12px;
+        padding: 10px;
+        max-width:100%;
+        @include text-overflow();
+        @media($dt) {
+          font-size:15rem;
+          padding:15rem;
+        }
+      }
+    }
+  }
+
+  //BOTTOM SECTOIN
+  .bottom-section {
+    @media($dt) {
+      padding:55rem 0;
+      position:relative;
+    }
+    .left-wrap {
+      @media($dt) {
+        left:0;
+        top:0;
+        width:50%;
+        height:100%;
+        background:$b-orange;
+        position:absolute;
+      }
+    }
+    .white-heading {
+      background: $b-orange;
+      @media($dt) {
+        padding: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform:translate(-50%,-50%);
+        width:337rem;
+      }
+      h1 {
+        color:white;
+        strong {
+          @media($dt) {
+            border-color:white;
+          }
+        }
+        strong:after {
+          background:white;
+
+        }
+      }
+    }
+    .extra-main {
+      padding: 50px $mob-margin;
+      background: $b-blue;
+      color:white;
+      @media($dt) {
+        padding:0;
+        position:absolute;
+        right: 0;
+        top: 0;
+        width:50%;
+        height:100%;
+        .inner {
+          position:absolute;
+          left:50%;
+          top:50%;
+          transform:translate(-50%,-50%);
+          width: percentage(437/600);
+        }
+      }
+      h2 {
+        color:$b-orange;
+        margin-bottom:1em;
+        font-size: 32px;
+        line-height:1em;
+        @media($dt) {
+          font-size:32rem;
+        }
+      }
+    }
+  }
+
+}
