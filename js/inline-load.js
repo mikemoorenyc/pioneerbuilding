@@ -41,6 +41,7 @@ function loadScript(url, callback) {
 // How to use it
 loadScript("//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js", function () {
     console.log('jquery loaded');
+
     function getScrollbarWidth() {
     var outer = document.createElement("div");
     outer.style.visibility = "hidden";

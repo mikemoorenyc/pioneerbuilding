@@ -58,7 +58,9 @@ globals.homeURL = '<?php echo $homeURL;?>';
 globals.siteDir = '<?php echo $siteDir;?>';
 globals.initialURL = window.location.href ;
 globals.initialSection = globals.initialURL.replace(globals.homeURL+'/', '');
-globals.currentPosition = globals.homeURL;
+globals.currentPosition = globals.initialURL;
+
+
 
 </script>
 <!--  STUFF FOR IE8 WILL GET REMOVED ON COMPILATION // REMOVE THIS LINE TO RENDER IT

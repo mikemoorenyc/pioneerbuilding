@@ -2,6 +2,23 @@
 <?php
 $avail = get_page_by_title('Availabilities');
 ?>
+  <div class="keys">
+    <div class="deck">
+      <span class="copy header-styling">
+        Roof Deck
+      </span>
+      <span class="pointer">
+      </span>
+    </div>
+    <div class="retail">
+      <span class="copy header-styling">
+        Retail &amp; Mezzanine
+      </span>
+      <span class="pointer">
+      </span>
+    </div>
+
+  </div>
   <h1>
     <span class="number">10</span>
     <span class="words">

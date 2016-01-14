@@ -1,16 +1,14 @@
-function stateSender(id) {
-  if(history.pushState) {
+function stateSender(id,noPush) {
+  if(history.pushState && noPush != true) {
     window.history.pushState(id,id,id);
   }
   //NAV ACTIVE
-  var activator = id.replace(globals.homeURL,'');
-  activator = activator.replace('/','');
   $('nav a').removeClass('active');
-  $('nav a.'+activator).addClass('active');
+  $('nav a[href="'+id+'"]').addClass('active');
 
   //CURRENT POSITION
   globals.currentPosition = id;
-
+  console.log(globals.currentPosition);
   //var gaSend = rootPath+id;
   //console.log(gaSend);
 
@@ -18,5 +16,7 @@ function stateSender(id) {
 
 //GO BACK
 window.addEventListener('popstate', function(e) {
-  linkMover(e);
+//e.preventDefault();
+console.log(e);
+  linkMover(e.state,true);
 });

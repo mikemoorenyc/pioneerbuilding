@@ -20,6 +20,8 @@ function siteInit() {
       cssLoaded = true;
       clearInterval(thechecker);
       sideBySide();
+      linkMover(globals.initialURL);
+      console.log(globals.initialURL);
       console.log('css loaded');
     }
   }, 10);
@@ -50,6 +52,7 @@ function siteInit() {
   lazyLoad();
   //MOVE TO CURRENT URL
   //linkMover(globals.initialURL);
+
 console.log('scripts loaded');
 
 

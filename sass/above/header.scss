@@ -12,6 +12,13 @@ header {
     position: relative;
     background: white;
     height: 71px;
+    >a {
+      position:absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height:100%;
+    }
     .mobile-logo {
       position: absolute;
       left: $mob-margin;

@@ -2,14 +2,14 @@
 
   <header>
     <h1 class="logo">
-
+      <a href="<?php echo $homeURL;?>/">
       <div class="mobile-logo dt-hide">
         <svg>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mobile-logo"></use>
         </svg>
       </div>
       <span class="dt-hide text">Pioneer Building</span>
-
+    </a>
     </h1>
 
     <?php include 'navSection.php';?>
@@ -31,7 +31,7 @@ $mobSrc = $mobSrc[0];
 
     ?>
 
-   <img class="hero lazy-load" data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $mobSrc;?>"/> 
+   <img class="hero lazy-load" data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $mobSrc;?>"/>
 
   </div>
 
