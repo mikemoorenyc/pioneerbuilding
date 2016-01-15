@@ -54,11 +54,11 @@ $siteDesc = get_bloginfo('description');
 
 <script>
 globals = {};
-globals.homeURL = '<?php echo $homeURL;?>';
+globals.homeURL = '<?php echo $homeURL;?>/';
 globals.siteDir = '<?php echo $siteDir;?>';
 globals.initialURL = window.location.href ;
 globals.initialSection = globals.initialURL.replace(globals.homeURL+'/', '');
-globals.currentPosition = globals.initialURL;
+globals.currentPosition = '';
 
 
 
@@ -88,12 +88,12 @@ globals.currentPosition = globals.initialURL;
 </head>
 <div id="css-checker"></div>
 <body id="top">
-  <!--
+
 <div id="pre-loader">
 <img src="<?php echo $siteDir;?>/assets/imgs/logo.svg"  />
 
 </div>
--->
+
 
 
 
@@ -101,3 +101,4 @@ globals.currentPosition = globals.initialURL;
 <?php include 'assets/svgs.svg'; ?>
   </div>
 <div id="main-container" class="aspecter" data-basewidth="1200">
+  <div class="nav-spacer"></div>

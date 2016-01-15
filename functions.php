@@ -15,7 +15,7 @@ add_theme_support('post-thumbnails');
 
 add_image_size ( 'fake-full', 2000 , 2000 , false ) ;
 
-add_image_size ( 'logo-size', 105 , 35 , false ) ;
+add_image_size ( 'logo-size', 105*2 , 35*2 , false ) ;
 
 add_action( 'admin_init', 'my_theme_add_editor_styles' );
 function my_theme_add_editor_styles() {

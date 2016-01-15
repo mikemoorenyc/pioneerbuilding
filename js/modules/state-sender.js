@@ -8,7 +8,8 @@ function stateSender(id,noPush) {
 
   //CURRENT POSITION
   globals.currentPosition = id;
-  console.log(globals.currentPosition);
+
+  ga('send', 'pageview', id);
   //var gaSend = rootPath+id;
   //console.log(gaSend);
 
@@ -17,6 +18,6 @@ function stateSender(id,noPush) {
 //GO BACK
 window.addEventListener('popstate', function(e) {
 //e.preventDefault();
-console.log(e);
+
   linkMover(e.state,true);
 });

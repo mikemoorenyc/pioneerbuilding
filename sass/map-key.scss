@@ -1,0 +1,211 @@
+#map-key {
+  .pois {
+    padding: 20px 12px 15px 12px;
+    columns:2;
+    column-gap: 5px;
+    > span {
+      display:block;
+      font-size: 18px;
+      position:relative;
+      color:$b-blue;
+      margin: 0 0 7px 10px;
+      padding-top:6px;
+      padding-left:25px;
+      >span {
+      }
+      .copy {
+      }
+      .icon-holder {
+        position:absolute;
+        left: 0;
+        top: 0;
+        width:25px;
+        height: 25px;
+        background: url(#{$imgDir}/icon-star.png);
+        background-size:100% 100%;
+        &.square {
+          background-image:url(#{$imgDir}/icon-square.png);
+        }
+        &.triangle {
+          background-image:url(#{$imgDir}/icon-triangle.png);
+        }
+        &.circle {
+          background-image:url(#{$imgDir}/icon-circle.png);
+        }
+        &.citi{
+          background-image:url(#{$imgDir}/icon-citi.png);
+        }
+        &.heart{
+          background-image:url(#{$imgDir}/icon-heart.png);
+        }
+      }
+      &.citi {
+        color: #00a9e7;
+      }
+    }
+  }
+  .times, .transit {
+    padding: 25px $mob-margin;
+    border-top: 1px solid #d7d7d7;
+  }
+  .times {
+
+    font-family: $din;
+    line-height:1em;
+    letter-spacing:-4px;
+    .time {
+      display:inline-block;
+      width:50%;
+      vertical-align:top;
+      letter-spacing:normal;
+      padding-right:10px;
+      &:nth-child(even) {
+        padding: 0 0 0 10px;
+      }
+      &.big {
+        h4 {
+          color:$b-orange;
+          font-size:34px;
+        }
+      }
+    }
+    h3, .list {
+      margin-bottom:.35em
+    }
+    h3 {
+      font-size: inherit;
+    }
+    .list {
+      color:$b-blue;
+
+    }
+  }
+  .transit {
+    h3 {
+      font-size:33px;
+      line-height: normal;
+      margin-bottom: 1em;
+      strong {
+        &:after {
+          height:3px;
+          bottom: 5px;
+          position:relative;
+        }
+      }
+    }
+    .item {
+      font-size: 14px;
+      color: $b-blue;
+      margin-bottom: 12px;
+      img {
+        height: 22px;
+        width: auto;
+        margin: 0;
+
+      }
+    }
+
+  }
+  @media($dt) {
+    margin: 33rem 0 33rem 0;
+    position: relative;
+    .lines {
+      position:absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      hr, &:before, &:after {
+        display:block;
+        content:'';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 2rem;
+        background: $b-orange;
+      }
+      &:before {
+        left: percentage(270/1200);
+      }
+      hr {
+        left: percentage((270+(416/2))/1200);
+      }
+      &:after {
+        left: percentage((270+417)/1200);
+      }
+    }
+    > * {
+      position:relative;
+      float:left;
+    }
+    .pois {
+      width: percentage(270/1200);
+      padding: 0;
+      padding-top: 7rem;
+      padding-left: percentage(110/1200);
+      columns: auto;
+      > span {
+        display:block;
+        margin: 0 0 10px 0;
+        font-size: 18rem;
+        padding: 5rem 0 0 26rem;
+        height: 23rem;
+
+        .icon-holder {
+          width: 23rem;
+          height: 23rem;
+        }
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+    .times, .transit {
+      border: 0;
+      padding:0;
+      padding-top:10rem;
+    }
+    .times {
+      width: percentage(417/1200);
+      .time, .time:nth-child(even) {
+        padding: 0 0 0 32rem;
+
+      }
+      .time.big h4 {
+        font-size:32rem;
+      }
+    }
+    .transit {
+      width: percentage((1200 - (270+417))/1200);
+      padding-top:4rem;
+      padding-left: 40rem;
+      h3 {
+        font-size:32rem;
+        margin-bottom:.65em;
+        br {
+          display:none;
+        }
+        strong {
+          border-width: 4rem;
+        }
+      }
+      .t-list {
+        letter-spacing:-4px;
+        > * {
+          display:inline-block;
+          vertical-align:top;
+          letter-spacing:normal;
+          width: percentage(146/473);
+          margin: 0 0 8rem;
+          font-size: 14rem;
+          &:nth-child(even) {
+            width: percentage((473-146)/473);
+          }
+          img {
+            height: 22rem;
+          }
+        }
+      }
+    }
+  }
+}

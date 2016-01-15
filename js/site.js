@@ -20,8 +20,17 @@ function siteInit() {
       cssLoaded = true;
       clearInterval(thechecker);
       sideBySide();
-      linkMover(globals.initialURL);
-      console.log(globals.initialURL);
+      setTimeout(function(){
+        linkMover(globals.initialURL);
+        setTimeout(function(){
+
+          $(window).scroll(function(){
+            scrollState();
+          });
+
+        },globals.ts);
+      },500)
+
       console.log('css loaded');
     }
   }, 10);

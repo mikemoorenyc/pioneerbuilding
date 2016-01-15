@@ -50,8 +50,8 @@ $contact = get_page_by_title('Contact');
   foreach($logos as $l) {
     $logo = wp_get_attachment_image_src($l['logo'], 'logo-size', false);
     $src = $logo[0];
-    $w = $logo[1];
-    $h = $logo[2];
+    $w = $logo[1] /2;
+    $h = $logo[2] /2;
     if($l['alt-text']!= '') {
       $alt = $l['alt-text'];
     } else {

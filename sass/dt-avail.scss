@@ -8,7 +8,7 @@
     span.pointer {
       position:absolute;
       left: percentage(292/1200);
-      width:percentage(121/1200);
+      width:10.5%;
       height:3px;
       border-right:1px solid $b-blue;
       top:50%;
@@ -75,7 +75,7 @@
       padding: 0;
       width:668rem;
       height: 499rem;
-      background: url(#{$imgDir}/building-overlay-mock.png);
+      background: url(#{$imgDir}/building-overlay-hires.png);
       background-size:100% 100%;
       left: 395rem;
       top: 255rem;

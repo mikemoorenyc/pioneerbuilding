@@ -15,6 +15,40 @@ function loadCSS(e,t,n){"use strict";function o(){var t;for(var i=0;i<s.length;i
 
 
 loadCSS(cssExpand);
+
+
+//SET SCROLLBAR THING
+function getScrollbarWidth() {
+  var outer = document.createElement("div");
+  outer.style.visibility = "hidden";
+  outer.style.width = "100px";
+  outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+  document.body.appendChild(outer);
+
+  var widthNoScroll = outer.offsetWidth;
+  // force scrollbars
+  outer.style.overflow = "scroll";
+
+  // add innerdiv
+  var inner = document.createElement("div");
+  inner.style.width = "100%";
+  outer.appendChild(inner);
+
+  var widthWithScroll = inner.offsetWidth;
+
+  // remove divs
+  outer.parentNode.removeChild(outer);
+  var styleString = '<style>html.__modal-opened body, html.__site-loading body{ margin-right: '+(widthNoScroll - widthWithScroll)+'px }html.__modal-opened header, html.__site-loading header{margin-left: -'+(widthNoScroll - widthWithScroll)/2+'px; padding-right: '+(widthNoScroll - widthWithScroll)+'px }</style>';
+  //return widthNoScroll - widthWithScroll;
+  var script = window.document.getElementById("inline-scripts");
+  script.insertAdjacentHTML('afterend', styleString);
+}
+getScrollbarWidth();
+
+
+
+
 function loadScript(url, callback) {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -41,33 +75,10 @@ function loadScript(url, callback) {
 // How to use it
 loadScript("//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js", function () {
     console.log('jquery loaded');
+    setTimeout(function(){
+     $('html, body').scrollTop(0);
+    },500);
 
-    function getScrollbarWidth() {
-    var outer = document.createElement("div");
-    outer.style.visibility = "hidden";
-    outer.style.width = "100px";
-    outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
-
-    document.body.appendChild(outer);
-
-    var widthNoScroll = outer.offsetWidth;
-    // force scrollbars
-    outer.style.overflow = "scroll";
-
-    // add innerdiv
-    var inner = document.createElement("div");
-    inner.style.width = "100%";
-    outer.appendChild(inner);
-
-    var widthWithScroll = inner.offsetWidth;
-
-    // remove divs
-    outer.parentNode.removeChild(outer);
-
-    //return widthNoScroll - widthWithScroll;
-    $('body').append('<style>html.__modal-opened body{ margin-right: '+(widthNoScroll - widthWithScroll)+'px }html.__modal-opened header{margin-left: -'+(widthNoScroll - widthWithScroll)/2+'px; padding-right: '+(widthNoScroll - widthWithScroll)+'px }</style>');
-}
-getScrollbarWidth();
     loadScript(siteDir+"/js/main.js?v="+timestamp, function(){
       siteInit();
     });

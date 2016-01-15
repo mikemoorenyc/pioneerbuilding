@@ -20,7 +20,7 @@ foreach($navArray as $n) {
     </svg>
 
   </span>
-  <?php echo $n[0];?>
+  <span class="copy"><?php echo $n[0];?><span>
 </a>
 
 </li>

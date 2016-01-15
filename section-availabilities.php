@@ -42,7 +42,7 @@ $avail = get_page_by_title('Availabilities');
     ?>
   </div>
   <div class="building-layout">
-    <img class="mob-building lazy-load dt-hide" data-dt="<?php echo $siteDir;?>/assets/imgs/mob-build-place.png" data-mob="<?php echo $siteDir;?>/assets/imgs/mob-build-place.png" />
+    <img class="mob-building lazy-load dt-hide" data-dt="<?php echo $siteDir;?>/assets/imgs/building-mobile-stack.png" data-mob="<?php echo $siteDir;?>/assets/imgs/building-mobile-stack.png" />
 
   </div>
 
