@@ -177,10 +177,10 @@ nav {
         text-transform: capitalize;
         min-width:23px;
         &.active {
-          color: $b-grey;
+          color: $b-orange;
           svg {
             * {
-              fill: $b-grey;
+              fill: $b-orange;
             }
           }
         }
