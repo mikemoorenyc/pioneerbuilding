@@ -1,5 +1,5 @@
 function linkMover(id,noPush) {
-  if(id == globals.currentPosition) {
+  if(id == globals.currentPosition || $('html').hasClass("__menu-scrolling") == true) {
 
     return false;
   }
