@@ -1,6 +1,6 @@
 .top-copy {
   .heading {
-    padding: 40px $mob-margin;
+    padding: 40rem $mob-margin;
     background: $b-blue;
   }
   .content {
@@ -8,9 +8,9 @@
     color:white;
     font-family: $din;
     text-transform:uppercase;
-    font-size:32px;
+    font-size:24rem;
     line-height: (34em/32);
-    padding: 40px $mob-margin;
+    padding: 40rem $mob-margin;
   }
   @media($dt) {
     padding: 35rem 0;
@@ -23,7 +23,7 @@
       position:absolute;
       left:50%;
       top:50%;
-      transform:translate(-50%,-50%);
+      //transform:translate(-50%,-50%);  
       width: percentage(284/600);
       padding:0;
     }
@@ -34,6 +34,11 @@
       width:50%;
       height:100%;
       background:$b-blue;
+      h1 {
+        br {
+          display:none;
+        }
+      }
 
     }
     .right-wrap {

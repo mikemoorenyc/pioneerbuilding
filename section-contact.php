@@ -1,4 +1,4 @@
-<section id="contact" data-section-anchor="<?php echo $homeURL;?>/contact/" class="clearfix">
+<section id="contact" data-section-anchor="<?php echo $homeURL;?>/contact/" class="clearfix scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject">
 <?php
 $contact = get_page_by_title('Contact');
 
@@ -12,7 +12,7 @@ $contact = get_page_by_title('Contact');
     $list = get_post_meta( $contact->ID, 'contact-list', true );
     foreach($list as $l) {
       ?>
-      <li>
+      <li class="fade-kid">
         <h3><span><?php echo $l['name'];?><span></h3>
         <a href="mailto:<?php echo $l['email'];?>"><?php echo $l['email'];?></a>
         <?php

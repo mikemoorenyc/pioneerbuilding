@@ -8,7 +8,7 @@ section#building {
     }
   }
   .header-1, .bottom-section .white-heading {
-    padding: 35px $mob-margin;
+    padding: 35rem $mob-margin;
 
   }
   .header-1 {
@@ -24,11 +24,11 @@ section#building {
         position: absolute;
         left:50%;
         top:50%;
-        transform: translate(-50%,-50%);
-
+      //  transform: translate(-50%,-50%);
+        max-width: 385rem;
         h1 {
-        max-width: 100%;
-        white-space: nowrap;
+
+
         }
       }
     }
@@ -45,13 +45,13 @@ section#building {
   .info {
     background: $b-blue;
     color: white;
-    padding: 50px $mob-margin;
+    padding: 50rem $mob-margin;
     @media($dt) {
       padding:0;
       position:absolute;
       left:50%;
       top:50%;
-      transform:translate(-50%,-50%);
+      //transform:translate3d(-49.99%,-49.99%,0);
       width:percentage(437/600);
       .stat-list {
 

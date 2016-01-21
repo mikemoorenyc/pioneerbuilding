@@ -1,45 +1,73 @@
 section#availabilities {
-  padding: 65px 0 35px;
+  padding: 65rem 0 35rem;
   .keys {
     display:none;
   }
+
+  .mob-silos {
+    padding: 0 $mob-margin;
+    > ul {
+      float: left;
+      width: 50%;
+    }
+  }
+
+
   h1 {
     position:relative;
     letter-spacing:-.01em;
     margin: 0 $mob-margin;
     .number {
       display:block;
-      font-size:145px;
+      font-size:145rem;
       line-height:.8em;
+      letter-spacing:-.1em;
     }
     .words {
       position:absolute;
-      left: 122px;
-      top: -10px;
+      left: 106rem;
+      top: -10rem;
       line-height:1em;
+      font-size:60rem;
       > span {
         display:block;
         strong {
-          border-bottom:5px solid $b-orange;
+
           line-height:.65em;
+          border:0;
           &:after {
-            display:none;
+            display:block;
+            position: absolute;
+            left: 0;
+            bottom:-5rem;
+            height: 5rem;
+            background: $b-orange;
+            width: 100%;
+            transform-origin: left center;
+            transform:scaleX(0);
+            transition: transform $ts*1.5;
           }
         }
       }
     }
+    &.__scroll-activated {
+      .words > span strong:after {
+        transform:scaleX(1);
+      }
+    }
   }
   .building-layout {
-    padding-top:20px;
+    padding-top:20rem;
     img.mob-building {
       max-width: percentage(310/320);
     }
   }
   ul.avail-list {
-    padding: 26px $mob-margin 0;
+    padding: 26rem 17rem 0 0;
     > li {
-      margin-bottom:5px;
+      margin-bottom:5rem;
       letter-spacing:-4px;
+      position:relative;
       &:last-child {
         margin: 0;
       }
@@ -54,22 +82,22 @@ section#availabilities {
         &.num {
           color: $b-blue;
 
-          width:5%;
-          font-size:20px;
+          width:18%;
+          font-size:20rem;
 
         }
         &.rsf {
-          font-size:20px;
-          width: 40%;
+          font-size:20rem;
+          width: 81%;
           color:$b-orange;
 
         }
         &.view {
           width: 54%;
           text-align:left;
-          padding-left:30px;
-color:$b-orange;
-
+          padding-left:30rem;
+          color:$b-orange;
+          display:none;
         }
       }
       &.fl-1 {
@@ -77,42 +105,72 @@ color:$b-orange;
           display:block;
           width: auto;
           text-align:left;
+          white-space:nowrap;
         }
         >span.rsf {
-          margin-left: 5%;
+          margin-left: 18%;
         }
       }
     }
   }
   .bottom-section {
-    padding: 30px $mob-margin 0;
+    margin-top: 24rem;
+    padding: 24rem $mob-margin 0;
     position: relative;
-    > * {
-      float:left;
-      width:50%;
-      padding-right:10px;
-      &:last-child {
-        padding: 0 0 0 10px;
+    &:before {
+      display:block;
+      content:'';
+      position:absolute;
+      left:50%;
+      top: 0;
+      width: percentage(123/320);
+      height: 1px;
+      background: #e1e1e1;
+      margin-left: -(percentage(123/320)/2);
+    }
+    a {
+      font-size: 20rem;
+    }
+    .tf-list {
+      width: 100% + ($mob-margin*2);
+
+      position:relative;
+      left: -($mob-margin);
+      letter-spacing:-4px;
+      padding-left: $mob-margin;
+
+      > li {
+        display:inline-block;
+        letter-spacing:normal;
+        vertical-align:top;
+        margin: 0 10rem 5rem 0 ;
+
+        &:last-child {
+          margin-right: 0;
+        } a {
+          color: $b-blue;
+
+        }
       }
     }
+    .downloads {
+      padding-top: 15rem;
 
-    .tf-list, .downloads {
       > li {
-        margin-bottom:25px;
-        &:last-child {
+        float: left;
+        max-width: 105rem;
+        margin-left: 25rem;
+        &:first-child {
           margin: 0;
         }
         a {
-          color:$b-blue;
-          font-size:24px;
-          @media($dt) {
-            font-size:24rem;
-          }
+          color:$b-orange;
+          display:block;
+
+          line-height:(18em/20);
         }
       }
     }
-    .downloads > li a {
-      color: $b-orange;
-    }
+
   }
 }

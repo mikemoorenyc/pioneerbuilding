@@ -19,7 +19,7 @@ $avail = get_page_by_title('Availabilities');
     </div>
 
   </div>
-  <h1>
+  <h1 class="scroll-magic">
     <span class="number">10</span>
     <span class="words">
       <span>
@@ -45,8 +45,15 @@ $avail = get_page_by_title('Availabilities');
     <img class="mob-building lazy-load dt-hide" data-dt="<?php echo $siteDir;?>/assets/imgs/building-mobile-stack.png" data-mob="<?php echo $siteDir;?>/assets/imgs/building-mobile-stack.png" />
 
   </div>
+  <div class="mob-silos dt-hide clearfix">
+    <ul class="left no-style">
 
-  <ul class="avail-list no-style">
+    </ul>
+    <ul class="right no-style">
+
+    </ul>
+  </div>
+  <ul class="avail-list no-style mob-hide">
     <?php
     $listings = get_post_meta( $avail->ID, 'listings', true );
     for($i = 10; $i > 0; $i--) {
@@ -192,7 +199,7 @@ $avail = get_page_by_title('Availabilities');
     $dl = get_post_meta( $avail->ID, 'downloads', true );
     if(count($dl)>0) {
       ?>
-      <ul class="downloads no-style">
+      <ul class="downloads no-style clearfix">
         <?php
         foreach($dl as $d) {
           $link = wp_get_attachment_url( $d['document'], 'full' );

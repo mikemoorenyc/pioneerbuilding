@@ -4,6 +4,30 @@ globals.tab = 401,
 globals.dt = 1000;
 windoww = $(window).width();
 windowh = $(window).height();
+
+globals.swaps = [
+  [
+    'brooklyn',
+    'flatbush'
+  ],
+  [
+    'Setting',
+    'Design'
+  ],
+  [
+    'Central',
+    'Simple'
+  ],
+  [
+    'Flatbush',
+    'Design'
+  ]
+];
+
+$('.extra-main .list li').addClass('fade-kid');
+
+
+
 orientationClass();
 $(window).resize(function(){
   windoww = $(window).width();
@@ -19,9 +43,12 @@ function siteInit() {
     if(ztest == '1px') {
       cssLoaded = true;
       clearInterval(thechecker);
-      sideBySide();
+      //sideBySide();
       setTimeout(function(){
         linkMover(globals.initialURL);
+        $(window).scroll(function(){
+          scrollMagic();
+        });
         setTimeout(function(){
 
           $(window).scroll(function(){
@@ -37,7 +64,11 @@ function siteInit() {
 
   //theHistory();
 
-
+  //MOBILE MENU TOGGLE
+  $('header a.menu-toggle').click(function(e){
+    e.preventDefault();
+    $('html').toggleClass("__mobile-menu-opened");
+  })
 
 
 

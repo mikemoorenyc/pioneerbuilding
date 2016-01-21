@@ -66,7 +66,7 @@
         > span {
           display:inline-block;
           strong {
-            border-width:5rem;
+            
           }
         }
       }
@@ -146,6 +146,7 @@
           font-size:20rem;
           opacity: 0;
           transition: opacity $ts;
+          display:inline-block;
         }
         &.__activated {
           span.view {
@@ -159,6 +160,9 @@
     .bottom-section {
       position: static;
       padding: 0;
+      a {
+        font-size:24rem;
+      }
       .downloads {
         position:absolute;
         top:115rem;
@@ -166,7 +170,10 @@
         width: percentage((1200-935)/1200);
         padding: 0 20rem 0 0;
         > li {
-          margin-bottom: 24rem;
+          margin-left: 0;
+          margin-bottom: 24rem !important;
+          float: none;
+          max-width: none;
           a {
             color: $b-blue;
           }
@@ -175,9 +182,10 @@
       .tf-list {
         position:absolute;
         bottom: 105rem;
-        left: 0;
+        left: 395rem;
         text-align: center;
-        width: 100%;
+        width: 520rem;
+        padding: 0;
         > li {
           margin: 0 20rem !important;
           display:inline-block;

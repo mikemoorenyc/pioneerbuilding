@@ -1,16 +1,15 @@
 #map-key {
   .pois {
-    padding: 20px 12px 15px 12px;
+    padding: 20rem $mob-margin;
     columns:2;
-    column-gap: 5px;
+    column-gap: 0rem;
     > span {
       display:block;
-      font-size: 18px;
       position:relative;
       color:$b-blue;
-      margin: 0 0 7px 10px;
-      padding-top:6px;
-      padding-left:25px;
+      margin: 0 0 7rem 5rem;
+      padding-top:6rem;
+      padding-left:25rem;
       >span {
       }
       .copy {
@@ -19,8 +18,8 @@
         position:absolute;
         left: 0;
         top: 0;
-        width:25px;
-        height: 25px;
+        width:25rem;
+        height: 25rem;
         background: url(#{$imgDir}/icon-star.png);
         background-size:100% 100%;
         &.square {
@@ -45,7 +44,7 @@
     }
   }
   .times, .transit {
-    padding: 25px $mob-margin;
+    padding: 25rem $mob-margin;
     border-top: 1px solid #d7d7d7;
   }
   .times {
@@ -58,14 +57,14 @@
       width:50%;
       vertical-align:top;
       letter-spacing:normal;
-      padding-right:10px;
+      padding-right:7rem;
       &:nth-child(even) {
-        padding: 0 0 0 10px;
+        padding: 0 0 0 7rem;
       }
       &.big {
         h4 {
           color:$b-orange;
-          font-size:34px;
+          font-size:32rem;
         }
       }
     }
@@ -82,13 +81,13 @@
   }
   .transit {
     h3 {
-      font-size:33px;
+      font-size:33rem;
       line-height: normal;
       margin-bottom: 1em;
       strong {
         &:after {
-          height:3px;
-          bottom: 5px;
+          height:3rem;
+          bottom: 5rem;
           position:relative;
         }
       }
@@ -96,9 +95,9 @@
     .item {
       font-size: 14px;
       color: $b-blue;
-      margin-bottom: 12px;
+      margin-bottom: 12rem;
       img {
-        height: 22px;
+        height: 22rem;
         width: auto;
         margin: 0;
 

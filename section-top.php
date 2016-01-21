@@ -14,6 +14,12 @@
 
     <?php include 'navSection.php';?>
 
+    <a alt="Open" href="menu" class="menu-toggle dt-hide">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu10"></use>
+      </svg>
+    </a>
+
   </header>
 
   <div id="hero-image">

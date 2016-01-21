@@ -1,11 +1,11 @@
 footer {
-  font-size:16px;
+  font-size:16rem;
   color: $b-grey;
   font-family: $din;
-  padding: 11px $mob-margin;
+  padding: 11rem $mob-margin;
   @media($dt) {
     padding: 10rem 70rem 10rem 110rem;
-    font-size:16rem;
+
     > * {
       float:left;
       width: 50%;

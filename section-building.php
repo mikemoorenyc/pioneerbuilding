@@ -3,10 +3,10 @@
 $building=get_page_by_title('Building');
 
 ?>
-<div class="top-section side-by-side">
+<div class="top-section side-by-side scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject">
   <div class="inner">
   <div class="header-1">
-  <div class="left-side">
+  <div class="left-side fade-kid">
     <?php echo wpautop($building->post_content);?>
   </div>
 
@@ -17,11 +17,11 @@ $building=get_page_by_title('Building');
     $stats = get_post_meta( $building->ID, 'building-stats', true );
     if(count($stats) > 0) {
       ?>
-      <ul class="stat-list">
+      <ul class="stat-list ">
         <?php
         foreach($stats as $s) {
           ?>
-          <li>  <?php tagStripper($s['text'], array('p'));?> </li>
+          <li class="fade-kid">  <?php tagStripper($s['text'], array('p'));?> </li>
 
           <?php
         }
@@ -86,21 +86,21 @@ $building=get_page_by_title('Building');
       <?php
     }
   ?>
-<div class="bottom-section side-by-side">
+<div class="bottom-section side-by-side scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject">
 <div class="inner">
   <?php
   $extra= get_post_meta( $building->ID, 'building-extra-info', true );
   $extra = $extra[0];
   ?>
   <div class="left-wrap">
-  <div class="white-heading left-side">
+  <div class="white-heading left-side fade-kid">
     <?php echo $extra['heading'];?>
 
   </div>
   </div>
   <div class="extra-main">
     <div class="inner right-side">
-      <div class="sub">
+      <div class="sub fade-kid">
         <?php echo $extra['sub-heading'];?>
       </div>
       <div class="list">

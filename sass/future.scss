@@ -7,7 +7,7 @@ section#future {
   .map-section {
     position:relative;
     .copy {
-      padding: 40px $mob-margin 50px $mob-margin;
+      padding: 40rem $mob-margin 50rem $mob-margin;
       @media($dt) {
         position: absolute;
         right: 0;
@@ -22,6 +22,10 @@ section#future {
         @media($dt) {
           font-size:36rem;
           margin-bottom:.75em;
+          width: 155rem;
+          br {
+            display: none;
+          }
           strong {
             border-width:4rem;
           }
@@ -30,19 +34,19 @@ section#future {
       .future-points {
         li {
           margin-bottom:1em;
-          font-size: 30px;
+          font-size: 30rem;
           color: $b-blue;
           @media($dt) {
             margin-bottom:12rem;
           }
           h3 {
-            font-size:48px;
+            font-size:36rem;
             @media($dt) {
               font-size:26.8rem;
             }
           }
           h4 {
-            font-size:30px;
+            font-size:30rem;
             line-height:normal;
             text-transform:none;
             @media($dt) {
@@ -55,13 +59,13 @@ section#future {
         }
       }
       .disc {
-        margin-top: 45px;
+        margin-top: 45rem;
         position: relative;
-        width:226px;
+        width:226rem;
         color:$b-blue;
         font-family:$din;
-        font-size:18px;
-        padding-top:5px;
+        font-size:18rem;
+        padding-top:5rem;
         @media($dt) {
           margin-top: 15rem;
           padding: 0 0 0 30rem;
@@ -74,10 +78,10 @@ section#future {
           display:block;
           content:'';
           position:absolute;
-          right:-43px;
+          right:-43rem;
           top: 0;
-          width:30px;
-          height: 48px;
+          width:30rem;
+          height: 48rem;
           background:url(#{$imgDir}/build-icon.png);
           background-size: 100% 100%;
           @media($dt) {

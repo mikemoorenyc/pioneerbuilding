@@ -1,0 +1,11 @@
+.generalFader {
+  .fade-kid {
+    @media($dt) {
+      opacity: 0;
+    }
+    transition: opacity $ts*1.5;
+    &.__activated {
+      opacity: 1;
+    }
+  }
+}

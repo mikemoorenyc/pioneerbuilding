@@ -30,6 +30,8 @@ Pioneer Building | Legal Copy to be placed here
     </a>
   </div>
 
-
+  <style>
+  @import url("//hello.myfonts.net/count/301afb");
+  </style>
   </body>
 </html>

@@ -10,10 +10,18 @@ function scrollMagic() {
     var theMagic = $(this);
     if($(theMagic).hasClass('__scroll-activated') === false) {
 
+
+
+
       var destop = $(theMagic).offset(),
           dtop = destop.top;
 
-      if ((dtop-200)-cutoff <= stop) {
+      if($(theMagic).data('scrollposition') == 'bottom bottom') {
+            dtop = dtop + $(theMagic).height();
+            cutoff = windowh;
+      }
+
+      if ((dtop-0)-cutoff <= stop) {
 
         $(theMagic).addClass('__scroll-activated');
         scrollRunner(theMagic);
@@ -22,6 +30,13 @@ function scrollMagic() {
     }
 
   });
+
+  if($(window).scrollTop() + $(window).height() == $(document).height()) {
+      var theMagic = $('.scroll-magic').last();
+      $(theMagic).addClass('__scroll-activated');
+      scrollRunner(theMagic);
+   }
+
   function scrollRunner(theMagic) {
 
     var thefunction = $(theMagic).data('scrollfunction'),

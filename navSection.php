@@ -14,13 +14,8 @@ foreach($navArray as $n) {
 <li class="<?php echo $n[0];?>">
 
 <a href="<?php echo $homeURL;?>/<?php echo $n[0];?>/">
-  <span class="icon dt-hide">
-    <svg>
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#<?php echo $n[1];?>"></use>
-    </svg>
 
-  </span>
-  <span class="copy"><?php echo $n[0];?><span>
+  <span class="copy"><?php echo $n[0];?></span>
 </a>
 
 </li>
@@ -35,5 +30,9 @@ foreach($navArray as $n) {
 
   </ul>
 
-
+  <a href="close" class="menu-toggle dt-hide">
+    <svg>
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#geometry64"></use>
+    </svg>
+  </a>
 </nav>

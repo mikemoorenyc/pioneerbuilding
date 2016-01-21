@@ -1,5 +1,5 @@
 <section id="location" data-section-anchor="<?php echo $homeURL;?>/location/">
-  <div class="top-copy">
+  <div class="top-copy side-by-side scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject">
     <div class="inner">
   <?php
   $location = get_page_by_title('Location');
@@ -7,13 +7,13 @@
   $content = $content[0];
   ?>
     <div class="left-wrap">
-    <div class="heading left-side">
+    <div class="heading left-side fade-kid">
       <?php echo $content['main-heading'];?>
 
     </div>
     </div>
     <div class="right-wrap">
-    <div class="content right-side">
+    <div class="content right-side fade-kid">
       <?php echo $content['main-content'];?>
     </div>
     </div>
@@ -29,11 +29,11 @@
     ?>
     <img data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $mobSrc;?>" class="lazy-load" alt="Locations Map"/>
 
-    <div id="map-key" class="clearfix">
+    <div id="map-key" class="clearfix scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject" data-scrollposition="bottom bottom">
       <div class="lines">
         <hr/>
       </div>
-      <div class="pois">
+      <div class="pois fade-kid">
         <span class="header-styling">
           <span class="icon-holder star">
           </span>
@@ -70,7 +70,7 @@
         </span>
       </div>
 
-      <div class="times">
+      <div class="times fade-kid">
         <div class="time">
           <h3>7 Minute Subway to</h3>
           <div class="list">Wall Street</div>
@@ -100,7 +100,7 @@
         </div>
 
       </div>
-      <div class="transit">
+      <div class="transit fade-kid">
         <h3><strong>Transit Access</strong> WIthin<br/> 3 min<span class="dt-hide">ute</span> walk</h3>
         <div class="t-list">
           <div class="item" data-d="1" data-m="4">

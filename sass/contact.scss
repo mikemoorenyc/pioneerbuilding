@@ -1,7 +1,7 @@
 section#contact {
   background:$b-blue;
   //color:white;
-  padding: 60px $mob-margin 40px $mob-margin;
+  padding: 60rem $mob-margin 40rem $mob-margin;
   @media($dt) {
     padding:55rem 25rem 40rem 110rem;
   }
@@ -15,7 +15,7 @@ section#contact {
     }
     .heading {
       h2 {
-        font-size:35px;
+        font-size:32rem;
         letter-spacing:-.01em;
         margin-bottom: 1em;
         @media($dt) {
@@ -32,15 +32,15 @@ section#contact {
       margin-bottom:15rem;
     }
     > li {
-      margin-bottom:30px;
+      margin-bottom:30rem;
       font-family: $din;
       color:white;
-      font-size:18px;
+      font-size:18rem;
       line-height:1em;
       @media($dt) {
         float:left;
         margin: 0 60rem 20rem 0;
-        font-size:18rem;
+
 
       }
       &:last-child {
@@ -48,18 +48,14 @@ section#contact {
       }
       h3 {
         color:white;
-        font-size:24px;
+        font-size:24rem;
         line-height:1em;
         margin-bottom:.25em;
-        @media($dt) {
-          font-size:24rem;
-        }
+
         span {
           display:inline-block;
-          border-bottom:4px solid $b-orange;
-          @media($dt) {
-            border-width:4rem;
-          }
+          border-bottom:4rem solid $b-orange;
+
         }
       }
     }
@@ -70,7 +66,7 @@ section#contact {
       padding:0;
     }
     h1 {
-      font-size:40px;
+      font-size:32rem;
       margin-bottom:.5em;
       @media($dt) {
         font-size:40rem;
@@ -78,22 +74,21 @@ section#contact {
     }
     a {
       font-family: $din;
-      font-size: 18px;
+      font-size: 18rem;
       display:inline-block;
-      @media($dt) {
-        font-size:18rem;
-      }
+
     }
   }
   .bottom-logos {
 
     position:relative;
-    margin-top: 60px;
+    margin-top: 60rem;
     width: 100% + ($mob-margin*2);
+  //width: calc(100% + (24px));
     left: -($mob-margin);
     text-align: center;
     letter-spacing:-4px;
-    margin-bottom:-12px;
+    margin-bottom:-12rem;
     @media($dt) {
       margin:0;
       float:right;
@@ -105,7 +100,7 @@ section#contact {
     > li {
       display:inline-block;
       vertical-align:middle;
-      margin: 0 6px 12px 6px ;
+      margin: 0 6rem 12rem 6rem ;
       @media($dt) {
         margin:0 25rem 40rem 0;
       }

@@ -4,15 +4,15 @@
   $content = $stats = get_post_meta( $future->ID, 'future-content', true );
   $content = $content[0];
   ?>
-  <div class="top-copy side-by-side">
+  <div class="top-copy side-by-side scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject">
   <div class="inner">
   <div class="left-wrap">
-    <div class="heading left-side">
+    <div class="heading left-side fade-kid">
       <?php echo $content['main-heading'];?>
     </div>
   </div>
   <div class='right-wrap'>
-    <div class="content right-side">
+    <div class="content right-side fade-kid">
 
 <?php echo $content['main-copy'];?>
     </div>

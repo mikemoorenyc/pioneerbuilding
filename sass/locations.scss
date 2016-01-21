@@ -32,6 +32,7 @@ section#location {
               font-family:$din;
               text-transform:uppercase;
               font-size:48rem;
+              line-height:1em;
               opacity: 0;
               transition: opacity $ts;
             }

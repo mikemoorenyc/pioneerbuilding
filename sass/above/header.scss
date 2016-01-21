@@ -1,5 +1,5 @@
 #main-container {
-  padding-bottom: 53px;
+  //padding-bottom: 53px;
   @media($dt) {
     padding:128rem 0 0 0;
     @media(max-height:1000px) {
@@ -18,10 +18,31 @@
   }
 }
 header {
+  backface-visibility: hidden;
+  > .menu-toggle {
+    display:block;
+    position:absolute;
+    right: 0;
+    top: 0;
+    width: 50rem;
+    height: 70rem;
+
+    svg {
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width:22rem;
+      height: 22rem;
+      * {
+        fill: $b-orange;
+      }
+    }
+  }
   h1 {
     position: relative;
     background: white;
-    height: 71px;
+    height: 70rem;
     >a {
       position:absolute;
       left: 0;
@@ -35,8 +56,8 @@ header {
       top: 50%;
       transform:translateY(-50%);
       svg {
-        width:60px;
-        height: 60px;
+        width:60rem;
+        height: 60rem;
         > * {
           fill: $b-orange;
         }
@@ -45,10 +66,10 @@ header {
     span.text {
       display:block;
       position: absolute;
-      left: calc(#{$mob-margin} + 70px);
+      left: calc(#{$mob-margin} + 70rem);
       top: 0;
-      line-height: 70px;
-      font-size: 33px;
+      line-height: 70rem;
+      font-size: 30rem;
       text-transform:uppercase;
       color: $b-orange;
       font-family: $din;
@@ -62,12 +83,9 @@ header {
     z-index:999;
     background:white;
     height:128rem;
-    left: 50%;
+    left: auto;
     top: 0;
-    transform:translateX(-50%);
-    @media(max-width:1599px) {
-      margin-left: 0 !important;
-    }
+
     @media(min-width:1600px) {
       padding-right: 0 !important;
     }
@@ -109,24 +127,27 @@ header {
 }
 nav {
   position: fixed;
-
+  left: 0;
+  right: 0;
+  top: 0;
   bottom: 0;
-  //box-shadow: 0 0 5px rgba(black,.4);
-  height: 53px;
-  width: 100%;
-  max-width: 800px;
   background:$b-blue;
   z-index:99;
   backface-visibility:hidden;
-  left: 0;
+  transform: translateX(100%);
+  transition: transform $ts*.5;
+  html.__mobile-menu-opened & {
+    transform: translateX(0%);
+  }
 
   @media(min-width:801px) {
-    left:50%;
-    transform: translateX(-50%);
+    //left:50%;
+    //transform: translateX(-50%);
     @media($dt) {
       position:static;
       left:auto;
-      transform:none;
+      transform:none !important;
+      transition: none;
       right: 45rem;
       bottom: auto;
       top: 0;
@@ -138,17 +159,46 @@ nav {
       max-width:none;
     }
   }
+  > a.menu-toggle {
+    display:block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    svg {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 8px;
+      bottom: 4px;
+      * {
+        fill:white;
+      }
+    }
+  }
 
 
   > ul.nav-list {
     text-align: center;
-    letter-spacing:-4px;
+  //  letter-spacing:-4px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
     > li {
-      display:inline-block;
-      vertical-align: middle;
-
+      padding: 14px 0;
       letter-spacing:normal;
-      margin: 0 percentage(8/320);
+    //  margin: 0 percentage(8/320);
+      @media(min-height:470px) {
+        padding: 10px 0;
+      }
+    //  display:inline-block;
+    //  vertical-align: middle;
+
+
+
       .icon {
         position: absolute;
         left: 50%;
@@ -168,14 +218,11 @@ nav {
       a {
         display:block;
         position: relative;
-        height: 53px;
         line-height:1em;
-        padding-top: 37px;
-        font-size: 10px;
-        font-family: 'Helvetica', "arial", sans-serif;
-        letter-spacing: .05em;
-        text-transform: capitalize;
-        min-width:23px;
+        color: $b-orange;
+        font-family: $din;
+        text-transform:uppercase;
+        font-size: 40px;
         &.active {
           color: $b-orange;
           svg {
@@ -190,8 +237,14 @@ nav {
     @media($dt) {
       text-align:right;
       width:100%;
+      position: static;
+      float: right;
+      transform: none !important;
       > li {
         margin: 0 0 0 25rem;
+        display:inline-block;
+        vertical-align:middle;
+        padding: 0 !important;
         a {
           height:128rem;
           line-height:128rem;
@@ -205,12 +258,30 @@ nav {
           letter-spacing:.01em;
           .copy {
             display:inline-block;
-            border-bottom: 3rem solid transparent;
+            //border-bottom: 3rem solid transparent;
             line-height:normal;
+            position:relative;
+            &:after {
+              display:block;
+              content:'';
+              width: 100%;
+              height: 3rem;
+              width: 100%;
+              left: 0;
+              bottom: 0;
+              background: $b-orange;
+              transform-origin: left center;
+              transform: scale(0, 1);
+              transition: transform $ts*.5;
+              backface-visibility: hidden;
+            }
           }
           &.active {
             .copy {
               border-color: $b-orange;
+              &:after {
+                transform: scale(1,1);
+              }
             }
           }
 

@@ -13,7 +13,7 @@ section#building {
         left: 0;
 
       }
-      
+
     }
     .slide {
       position:relative;
@@ -26,8 +26,8 @@ section#building {
         bottom: 0;
         background:rgba(black,.8);
         color:white;
-        font-size: 12px;
-        padding: 10px;
+        font-size: 12rem;
+        padding: 10rem;
         max-width:100%;
         @include text-overflow();
         @media($dt) {
@@ -61,7 +61,7 @@ section#building {
         position: absolute;
         left: 50%;
         top: 50%;
-        transform:translate(-50%,-50%);
+        //transform:translate(-50%,-50%);
         width:337rem;
       }
       h1 {
@@ -92,18 +92,16 @@ section#building {
           position:absolute;
           left:50%;
           top:50%;
-          transform:translate(-50%,-50%);
+        //  transform:translate(-50%,-50%);
           width: percentage(437/600);
         }
       }
       h2 {
         color:$b-orange;
         margin-bottom:1em;
-        font-size: 32px;
+        font-size: 32rem;
         line-height:1em;
-        @media($dt) {
-          font-size:32rem;
-        }
+
       }
     }
   }

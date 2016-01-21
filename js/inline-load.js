@@ -39,7 +39,7 @@ function getScrollbarWidth() {
 
   // remove divs
   outer.parentNode.removeChild(outer);
-  var styleString = '<style>html.__modal-opened body, html.__site-loading body{ margin-right: '+(widthNoScroll - widthWithScroll)+'px }html.__modal-opened header, html.__site-loading header{margin-left: -'+(widthNoScroll - widthWithScroll)/2+'px; padding-right: '+(widthNoScroll - widthWithScroll)+'px }</style>';
+  var styleString = '<style>html.__modal-opened body, html.__site-loading body{ margin-right: '+(widthNoScroll - widthWithScroll)+'px }html.__modal-opened header, html.__site-loading header{padding-right:'+(widthNoScroll - widthWithScroll)+'px;} </style>';
   //return widthNoScroll - widthWithScroll;
   var script = window.document.getElementById("inline-scripts");
   script.insertAdjacentHTML('afterend', styleString);

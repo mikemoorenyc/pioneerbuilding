@@ -18,7 +18,7 @@ $homeURL = esc_url( home_url( ) );
 
 //DECLARE THE SITE TITLE, SAVE A DB QUERY
 global $siteTitle;
-$siteTitle = 'Pioneer Building - 41 Flatbush Ave - Brooklyn, NY';
+$siteTitle = get_bloginfo('name');
 
 //DECLARE THE PAGE EXCERPT
 global $siteDesc;
@@ -29,9 +29,7 @@ $siteDesc = get_bloginfo('description');
 <head>
 
 <!-- ABOVE THE FOLD CSS -->
-<style>
-@import url("//hello.myfonts.net/count/301afb");
-</style>
+
 <style>
 <?php $inlinecss = file_get_contents($siteDir.'/css/main.css'); dirReplacer($inlinecss);?>
 </style>
