@@ -3,10 +3,10 @@
 $building=get_page_by_title('Building');
 
 ?>
-<div class="top-section side-by-side scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject">
+<div class="top-section side-by-side scroll-magic generalFader headline-trigger" data-scrollfunction="generalFader" data-scrollvariables="theObject">
   <div class="inner">
   <div class="header-1">
-  <div class="left-side fade-kid">
+  <div class="left-side fade-kid animate-head" data-count="0">
     <?php echo wpautop($building->post_content);?>
   </div>
 
@@ -61,7 +61,7 @@ $building=get_page_by_title('Building');
       $mobSrc = $mobSrc[0];
 
       ?>
-      <img class="slide-img lazy-load" data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $mobSrc;?>" alt="Slide Image Number <?php echo $looper+1;?>"/>
+      <img class="slide-img lazy-load hide" data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $mobSrc;?>" alt="Slide Image Number <?php echo $looper+1;?>"/>
       <?php
       if($g['caption'] != '') {
         ?>
@@ -80,20 +80,21 @@ $building=get_page_by_title('Building');
 
   ?>
 
-
+<div data-dir="next" class="button slick-next btn-class"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow487"></use></svg></div>
+<div  data-dir="prev" class="button slick-prev btn-class prev"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow487"></use></svg></div>
 </div>
 
       <?php
     }
   ?>
-<div class="bottom-section side-by-side scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject">
+<div class="bottom-section side-by-side scroll-magic generalFader headline-trigger" data-scrollfunction="generalFader" data-scrollvariables="theObject">
 <div class="inner">
   <?php
   $extra= get_post_meta( $building->ID, 'building-extra-info', true );
   $extra = $extra[0];
   ?>
   <div class="left-wrap">
-  <div class="white-heading left-side fade-kid">
+  <div class="white-heading left-side fade-kid animate-head" data-count="1">
     <?php echo $extra['heading'];?>
 
   </div>

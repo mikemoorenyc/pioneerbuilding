@@ -1,5 +1,5 @@
 <section id="location" data-section-anchor="<?php echo $homeURL;?>/location/">
-  <div class="top-copy side-by-side scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject">
+  <div class="top-copy side-by-side scroll-magic generalFader headline-trigger" data-scrollfunction="generalFader" data-scrollvariables="theObject">
     <div class="inner">
   <?php
   $location = get_page_by_title('Location');
@@ -7,7 +7,7 @@
   $content = $content[0];
   ?>
     <div class="left-wrap">
-    <div class="heading left-side fade-kid">
+    <div class="heading left-side fade-kid animate-head" data-count="2">
       <?php echo $content['main-heading'];?>
 
     </div>
@@ -27,8 +27,14 @@
     $mobSrc = wp_get_attachment_image_src($content['map-mobile'], 'large', false);
     $mobSrc = $mobSrc[0];
     ?>
+    <a class="modal-map" href="<?php echo $siteDir;?>/assets/imgs/Map-1.jpg">
     <img data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $mobSrc;?>" class="lazy-load" alt="Locations Map"/>
-
+    <span class="btn-class">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#multimedia-option100"></use>
+      </svg>
+    </span>
+    </a>
     <div id="map-key" class="clearfix scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject" data-scrollposition="bottom bottom">
       <div class="lines">
         <hr/>
@@ -144,6 +150,7 @@
   <ul id="location-gallery" class="clearfix no-style">
     <?php
     $locgal = get_post_meta( $location->ID, 'location-gallery', true );
+    $looper = 0;
     foreach($locgal as $lg) {
       $imgFull = wp_get_attachment_image_src($lg['image'], 'fake-full', false);
       $imgFull = $imgFull[0];
@@ -151,7 +158,7 @@
       $imgOverlay = $imgOverlay[0];
       ?>
       <li>
-        <a class="modal-single" href="<?php echo $imgFull;?>">
+        <a class="modal-gal" href="<?php echo $imgFull;?>" data-start="<?php echo $looper;?>" data-galtype="location" data-type="location">
           <span class="inner">
             <img class="lazy-load" data-dt="<?php echo $imgOverlay;?>" data-mob="<?php echo $imgOverlay;?>" />
 
@@ -175,11 +182,33 @@
 
       </li>
       <?php
+      $looper++;
     }
     ?>
 
 
   </ul>
+  <div data-galtype="location"  class="galleries hide">
+    <div class="gal" data-type="location">
+      <?php
+      $count = 0;
+      foreach($locgal as $lg) {
+        $imgFull = wp_get_attachment_image_src($lg['image'], 'fake-full', false);
+        $imgFull = $imgFull[0];
+        ?>
+        <div class="slide" data-count="<?php echo $count;?>">
+        <img  data-src="<?php echo $imgFull;?>" alt="<?php echo $ta;?>"/>
+        <div class="caption"><?php echo $lg['title'];?></div>
+      </div>
+        <?php
+        $count++;
+      }
+
+
+      ?>
+
+    </div>
+  </div>
 
 
 </section>

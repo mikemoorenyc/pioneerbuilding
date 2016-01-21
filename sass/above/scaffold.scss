@@ -122,9 +122,8 @@ h1, h2, h3, h4, h5, h6,
       bottom: -15rem;
     }
     @media($dt) {
-      border-bottom: (6rem) solid $b-orange;
       &:after {
-        display:none;
+        height:6rem;
       }
 
     }

@@ -1,0 +1,92 @@
+section#building {
+  .gallery {
+
+    .slide {
+      z-index:1;
+      opacity: 0;
+      &.current {
+        z-index:2;
+        opacity: 1;
+      }
+      /*
+      &.navOutNext {
+        opacity: 1 ;
+        animation: slideOutBottom $ts forwards ease-in-out;
+      }
+      &.navInNext {
+        opacity: 1;
+        animation: slideInHalfFromTop $ts forwards ease-in-out;
+      }
+      &.navOutPrev {
+        opacity: 1 ;
+        animation: slideOutHalfTop $ts forwards ease-in-out;
+      }
+      &.navInPrev {
+        opacity: 1 ;
+        z-index: 3 ;
+        animation: slideInFromBottom $ts forwards ease-in-out;
+      }
+      */
+      &.navOutNext {
+        animation: scaleUp $ts*2 forwards cubic-bezier(0.7, 0, 0.3, 1);
+      }
+      &.navInNext {
+        animation: scaleDownUp $ts*2 forwards cubic-bezier(0.7, 0, 0.3, 1);
+      }
+      &.navOutPrev {
+        animation: scaleDown $ts*2 forwards cubic-bezier(0.7, 0, 0.3, 1);
+      }
+      &.navInPrev {
+        animation: scaleUpDown $ts*2 forwards cubic-bezier(0.7, 0, 0.3, 1);
+      }
+    }
+  }
+}
+
+
+
+
+
+@keyframes scaleUp {
+	from {} /* Fixes Chrome issue 35.0.1916.114 (easing breaks) */
+	to {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+
+
+@keyframes scaleDownUp {
+	from {
+		opacity: 0;
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes scaleDown {
+	from {} /* Fixes Chrome issue 35.0.1916.114 (easing breaks) */
+	to {
+		opacity: 0;
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+}
+
+@keyframes scaleUpDown {
+	from {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}

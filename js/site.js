@@ -5,6 +5,22 @@ globals.dt = 1000;
 windoww = $(window).width();
 windowh = $(window).height();
 
+  function isHighDensity(){
+    return ((window.matchMedia && (window.matchMedia('only screen and (min-resolution: 124dpi), only screen and (min-resolution: 1.3dppx), only screen and (min-resolution: 48.8dpcm)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3)').matches)) || (window.devicePixelRatio && window.devicePixelRatio > 1.3));
+  }
+
+
+  function isRetina(){
+      return ((window.matchMedia && (window.matchMedia('only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-resolution: 75.6dpcm)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)').matches)) || (window.devicePixelRatio && window.devicePixelRatio >= 2)) && /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+  }
+
+  if(isRetina() == true || isHighDensity() == true) {
+    retina = true;
+    $('html').addClass('_retina-display');
+  } else {
+    retina = false;
+  }
+
 globals.swaps = [
   [
     'brooklyn',
@@ -36,6 +52,7 @@ $(window).resize(function(){
 });
 
 function siteInit() {
+
   //CHECK IF CSS IS LOADED
   var thechecker = setInterval(function(){
     var ztest = $('#css-checker').css('height');
@@ -43,7 +60,13 @@ function siteInit() {
     if(ztest == '1px') {
       cssLoaded = true;
       clearInterval(thechecker);
-      //sideBySide();
+
+      sideBySide();
+      setTimeout(function(){
+        sideBySide();
+      //  animateHead();
+      },500)
+    //
       setTimeout(function(){
         linkMover(globals.initialURL);
         $(window).scroll(function(){

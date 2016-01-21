@@ -85,7 +85,7 @@ $avail = get_page_by_title('Availabilities');
             $dtSrc = $dtSrc[0];
             ?>
 
-              <a href="<?php echo $dtSrc;?>" class="modal-single clearfix">
+              <a href="<?php echo $dtSrc;?>" data-special="fp" class="modal-single clearfix">
 
             <?php
           }
@@ -142,7 +142,7 @@ $avail = get_page_by_title('Availabilities');
           foreach($typeArray as $ta) {
             ?>
             <li>
-              <a class="modal-gal header-styling" data-galtype="fit" data-type="<?php echo $ta;?>" href="<?php echo $homeURL;?>/testfits/<?php echo str_replace(" ","",$ta);?>"><?php echo $ta;?></a>
+              <a class="modal-gal header-styling" data-galtype="fit" data-start="0" data-type="<?php echo $ta;?>" href="<?php echo $homeURL;?>/testfits/<?php echo str_replace(" ","",$ta);?>"><?php echo $ta;?></a>
             </li>
             <?php
           }
@@ -158,14 +158,15 @@ $avail = get_page_by_title('Availabilities');
             <div class="gal" data-type="<?php echo $ta;?>">
               <?php
               foreach($fits as $f) {
+                $count = 0;
                 if($f['type'] == $ta) {
                   ?>
-                  <div class="slide">
+                  <div class="slide" data-count="<?php echo $count;?>">
                     <?Php
                     $dtSrc = wp_get_attachment_image_src($f['image'], 'fake-full', false);
                     $dtSrc = $dtSrc[0];
                     ?>
-                    <img data-src="<?php echo $dtSrc;?>" alt="<?php echo $ta;?>"/>
+                    <img  data-src="<?php echo $dtSrc;?>" alt="<?php echo $ta;?>"/>
                     <?php
                     if($f['caption']!='') {
                       ?>
@@ -175,6 +176,7 @@ $avail = get_page_by_title('Availabilities');
                     ?>
                   </div>
                   <?php
+                  $count++;
                 }
               }
 

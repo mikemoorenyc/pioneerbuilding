@@ -4,10 +4,10 @@
   $content = $stats = get_post_meta( $future->ID, 'future-content', true );
   $content = $content[0];
   ?>
-  <div class="top-copy side-by-side scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject">
+  <div class="top-copy side-by-side scroll-magic generalFader headline-trigger" data-scrollfunction="generalFader" data-scrollvariables="theObject">
   <div class="inner">
   <div class="left-wrap">
-    <div class="heading left-side fade-kid">
+    <div class="heading left-side fade-kid animate-head" data-count="3">
       <?php echo $content['main-heading'];?>
     </div>
   </div>
@@ -29,7 +29,14 @@
     $mobSrc = wp_get_attachment_image_src($newcontent['mobile-image'], 'large', false);
     $mobSrc = $mobSrc[0];
     ?>
+    <a class="modal-map" href="<?php echo $siteDir;?>/assets/imgs/Map-2.jpg">
     <img data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $mobSrc;?>" class="lazy-load" alt="Future Map"/>
+    <span class="btn-class">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#multimedia-option100"></use>
+      </svg>
+    </span>
+  </a>
 
     <div class="copy">
       <?php echo $content['list-heading'];?>
