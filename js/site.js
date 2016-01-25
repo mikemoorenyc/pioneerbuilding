@@ -65,6 +65,18 @@ $(window).resize(function(){
 
 function siteInit() {
 
+  //LOAD IN SVG
+  $.ajax({
+    method: 'GET',
+    url: globals.siteDir+'/assets/svgs.svg',
+    dataType: 'html'
+  })
+  .done(function(data){
+
+
+    $('body').prepend('<div class="hide">'+data+'</div>');
+  });
+
   //CHECK IF CSS IS LOADED
   var thechecker = setInterval(function(){
     var ztest = $('#css-checker').css('height');

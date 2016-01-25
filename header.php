@@ -94,9 +94,9 @@ globals.currentPosition = '';
 
 
 
-
+<!--
   <div class="hide">
 <?php include 'assets/svgs.svg'; ?>
-  </div>
+  </div>-->
 <div id="main-container" class="aspecter" data-basewidth="1200">
   <div class="nav-spacer"></div>
