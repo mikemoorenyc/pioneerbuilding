@@ -6,7 +6,7 @@ $building=get_page_by_title('Building');
 <div class="top-section side-by-side scroll-magic generalFader headline-trigger" data-scrollfunction="generalFader" data-scrollvariables="theObject">
   <div class="inner">
   <div class="header-1">
-  <div class="left-side fade-kid animate-head" data-count="0">
+  <div class="left-side fade-kid line-mover" data-count="0">
     <?php echo wpautop($building->post_content);?>
   </div>
 
@@ -94,7 +94,7 @@ $building=get_page_by_title('Building');
   $extra = $extra[0];
   ?>
   <div class="left-wrap">
-  <div class="white-heading left-side fade-kid animate-head" data-count="1">
+  <div class="white-heading left-side fade-kid line-mover" data-count="1">
     <?php echo $extra['heading'];?>
 
   </div>

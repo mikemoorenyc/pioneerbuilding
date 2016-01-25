@@ -1,7 +1,7 @@
 function generalFader(p) {
   if($(p).hasClass('headline-trigger') == true) {
 
-    //headlineAnimator($(p).find('.animate-head').first());
+    headlineAnimator($(p).find('.animate-head').first());
   }
   var fadeKids = $(p).find('.fade-kid'),
       fadeCount = fadeKids.length,

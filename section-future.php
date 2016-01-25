@@ -7,7 +7,7 @@
   <div class="top-copy side-by-side scroll-magic generalFader headline-trigger" data-scrollfunction="generalFader" data-scrollvariables="theObject">
   <div class="inner">
   <div class="left-wrap">
-    <div class="heading left-side fade-kid animate-head" data-count="3">
+    <div class="heading left-side fade-kid line-mover" data-count="3">
       <?php echo $content['main-heading'];?>
     </div>
   </div>

@@ -4,7 +4,7 @@
       opacity: 0;
     }
     transition: opacity $ts*1.5;
-    &.animate-head h1 strong {
+    &.line-mover h1 strong {
       &:after {
         transform-origin: left center;
         transform: scaleX(0);
@@ -14,7 +14,7 @@
     }
     &.__activated {
       opacity: 1;
-      &.animate-head h1 strong {
+      &.line-mover h1 strong {
         &:after {
           transform: scaleX(1);
         }

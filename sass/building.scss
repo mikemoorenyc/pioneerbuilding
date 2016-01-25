@@ -1,6 +1,6 @@
 section#building {
   .gallery {
-    background: black;
+    background: white;
     position: relative;
     height: 246rem;
     opacity: 0;
@@ -50,11 +50,13 @@ section#building {
         position:absolute;
         left: 0;
         top: 0;
-        background:rgba(black,.8);
+      //  background:rgba(black,.8);
         color:white;
         font-size: 12rem;
         padding: 10rem;
         max-width:100%;
+        font-family: $din;
+        //text-shadow: 0 0 3rem rgba(black,.6),0 0 5rem rgba(black,.3);
         @include text-overflow();
         @media($dt) {
           font-size:15rem;

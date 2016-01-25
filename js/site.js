@@ -21,6 +21,17 @@ windowh = $(window).height();
     retina = false;
   }
 
+  //OPEN MODAL TOUCH EVENT THING
+
+  $(document).on('touchmove', function(e) {
+
+        if($('html').hasClass('__modal-opened') == true) {
+          e.preventDefault();
+          e.stopPropagation();
+        //  console.log('adsfasfd');
+        }
+  });
+
 globals.swaps = [
   [
     'brooklyn',
@@ -32,7 +43,8 @@ globals.swaps = [
   ],
   [
     'Central',
-    'Simple'
+    'Simple',
+    "Accessible"
   ],
   [
     'Flatbush',
@@ -64,7 +76,7 @@ function siteInit() {
       sideBySide();
       setTimeout(function(){
         sideBySide();
-      //  animateHead();
+        animateHead();
       },500)
     //
       setTimeout(function(){

@@ -276,7 +276,7 @@ nav {
               backface-visibility: hidden;
             }
           }
-          &.active {
+          &.active, &:hover {
             .copy {
               border-color: $b-orange;
               &:after {

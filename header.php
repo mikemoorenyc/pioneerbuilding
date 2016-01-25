@@ -72,12 +72,12 @@ globals.currentPosition = '';
 
 <!-- FACEBOOK TAGS REMOVED ON COMPILATION UNLESS YOU UNCOMMENT-->
 
-<meta property="og:site_name" content="<?php echo $siteTitle;?>" />
-<meta property="og:title" content="<?php echo $siteDesc;?>" />
+<meta property="og:site_name" content="The Pioneer Building" />
+<meta property="og:title" content="<?php echo $siteTitle;?>" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="<?php echo $homeURL;?>" />
-<!--<meta property="og:image" content="<?php echo $siteDir;?>/assets/blue-pin.jpg" />
-<meta property="og:description" content="<?php echo $siteDesc;?>" />-->
+<meta property="og:image" content="<?php echo $siteDir;?>/assets/imgs/fb-share.jpg" />
+<meta property="og:description" content="RESIDING IN VIBRANT DOWNTOWN BROOKLYN &amp; AT THE INTERSECTION OF THE BAM CULTURAL DISTRICT, FORT GREENE AND BOERUM HILL, THE PIONEER BUILDING IS LOCATED AT THE MOST COMPREHENSIVE TRANSPORTATION POINT IN NEW YORK CITY." />
 
 <meta name="geo.region" content="US-NY" />
 <meta name="geo.position" content="40.687623;-73.979387" />

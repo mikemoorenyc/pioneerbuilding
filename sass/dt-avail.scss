@@ -5,6 +5,7 @@
     width:100%;
     padding: 0;
     padding-top: percentage(940/1200);
+    backface-visibility:hidden;
     span.pointer {
       position:absolute;
       left: percentage(292/1200);
@@ -66,7 +67,7 @@
         > span {
           display:inline-block;
           strong {
-            
+
           }
         }
       }
@@ -162,29 +163,39 @@
       padding: 0;
       a {
         font-size:24rem;
+        color: $b-blue !important;
+        display:inline-block;
+        height:44rem;
+        line-height: 48rem !important;
+        padding: 0 8rem;
+        border: 1rem solid $b-orange;
+        transition: color $ts;
+        &:hover {
+          color:$b-orange !important;
+        }
       }
       .downloads {
         position:absolute;
         top:115rem;
-        left: percentage(935/1200);
-        width: percentage((1200-935)/1200);
-        padding: 0 20rem 0 0;
+        right: 45rem;
+        padding: 0 0rem 0 0;
         > li {
           margin-left: 0;
-          margin-bottom: 24rem !important;
-          float: none;
+          margin-bottom: 10rem !important;
+          float: right;
+          clear:both;
           max-width: none;
           a {
-            color: $b-blue;
+
           }
         }
       }
       .tf-list {
         position:absolute;
         bottom: 105rem;
-        left: 395rem;
+        left: 345rem;
         text-align: center;
-        width: 520rem;
+        width: 620rem;
         padding: 0;
         > li {
           margin: 0 20rem !important;

@@ -4,6 +4,7 @@ section#location {
       opacity: 0;
       transition: opacity $ts/2;
       visibility:hidden;
+      backface-visibility:hidden;
       &.__loaded {
         opacity:1;
         visibility:visible;
@@ -16,6 +17,7 @@ section#location {
         padding-top: percentage(200/320);
         pointer-events:none;
         overflow:hidden;
+        backface-visibility:hidden;
         @media($dt) {
           pointer-events: auto;
           html.no-touchevents & {
@@ -35,6 +37,7 @@ section#location {
               line-height:1em;
               opacity: 0;
               transition: opacity $ts;
+              backface-visibility:hidden;
             }
             &:after {
               position:absolute;
@@ -47,6 +50,7 @@ section#location {
               background:rgba(white,.8);
               opacity: 0;
               transition:opacity $ts;
+              backface-visibility:hidden;
             }
             .inner {
               transition: transform $ts;
@@ -58,7 +62,7 @@ section#location {
               }
               .inner {
                 transition-duration: $ts*4;
-                transform:scale(1.05);
+                transform:scale(1.03);
               }
             }
           }
@@ -74,6 +78,7 @@ section#location {
           height: 100%;
           background-position:center center;
           background-size:cover;
+          backface-visibility:hidden;
         }
       }
       @media($dt) {

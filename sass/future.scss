@@ -28,6 +28,9 @@ section#future {
           }
           strong {
             border-width:4rem;
+            &:after {
+              height:.12em;
+            }
           }
         }
       }
@@ -61,7 +64,7 @@ section#future {
       .disc {
         margin-top: 45rem;
         position: relative;
-        width:226rem;
+        padding-left: 40rem;
         color:$b-blue;
         font-family:$din;
         font-size:18rem;
@@ -78,7 +81,7 @@ section#future {
           display:block;
           content:'';
           position:absolute;
-          right:-43rem;
+          left: 0;
           top: 0;
           width:30rem;
           height: 48rem;
