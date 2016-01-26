@@ -137,19 +137,22 @@ section#availabilities {
       position:relative;
       left: -($mob-margin);
       letter-spacing:-4px;
-      padding-left: $mob-margin;
-
+      //padding-left: $mob-margin;
+      text-align: center;
       > li {
         display:inline-block;
         letter-spacing:normal;
         vertical-align:top;
-        margin: 0 10rem 5rem 0 ;
+        margin: 0 4rem 5rem 4rem ;
 
         &:last-child {
           margin-right: 0;
         } a {
           color: $b-blue;
-
+          display:inline-block;
+          font-size: .9em;
+          padding: .4em .4em .3em .4em;
+          border: 1px solid $b-orange;
         }
       }
     }

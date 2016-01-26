@@ -97,7 +97,7 @@ $avail = get_page_by_title('Availabilities');
           if($content['fp']!= '') {
             ?>
             <span class="view header-styling">
-              View
+              View Floor Plan
             </span></a>
             <?php
           }

@@ -82,6 +82,23 @@ $building=get_page_by_title('Building');
 
 <div data-dir="next" class="button slick-next btn-class"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow487"></use></svg></div>
 <div  data-dir="prev" class="button slick-prev btn-class prev"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow487"></use></svg></div>
+
+
+  <ul class="dots no-style">
+    <?php
+
+
+    for($i=0; $i < count($gal); $i++) {
+      ?>
+      <li data-count="<?php echo $i;?>"></li>
+
+      <?php
+    }
+
+    ?>
+
+  </ul>
+
 </div>
 
       <?php

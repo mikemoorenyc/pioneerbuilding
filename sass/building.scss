@@ -19,6 +19,37 @@ section#building {
       position:relative;
       height: 100%;
     }
+    .dots {
+      position: absolute;
+      bottom: 10rem;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 3;
+      line-height: 0;
+      letter-spacing:-4rem;
+      > li {
+        cursor: pointer;
+        display:inline-block;
+        vertical-align: top;
+        margin: 0 4rem;
+        width: 7rem;
+        height: 7rem;
+        border-radius:50%;
+        background: $b-blue;
+        &.current {
+          background:$b-orange;
+        }
+      }
+      @media($dt) {
+        bottom: 15rem;
+        > li {
+          margin: 0 4rem;
+          width: 15rem;
+          height: 15rem;
+        }
+      }
+    }
     .button {
       position: absolute;
       right: 0;
