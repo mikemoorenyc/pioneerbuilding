@@ -186,7 +186,11 @@
           clear:both;
           max-width: none;
           a {
-
+            border: 0;
+            color: $b-orange !important;
+            height: auto !important;
+            line-height: normal !important;
+            padding: 0 !important;
           }
         }
       }
