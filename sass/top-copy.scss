@@ -13,19 +13,22 @@
     padding: 40rem $mob-margin;
   }
   @media($dt) {
-    padding: 35rem 0;
+    padding: 40rem 0;
     position:relative;
     >.inner {
-      min-height: (400rem - (35rem*2));
+      //min-height: (400rem - (35rem*2));
     }
     .heading,.content {
       background:none;
       position:absolute;
       left:50%;
       top:50%;
-      //transform:translate(-50%,-50%);  
-      width: percentage(284/600);
+      //transform:translate(-50%,-50%);
+    //  width: percentage(284/600);
       padding:0;
+    }
+    .heading {
+      max-width: 100%;
     }
     .left-wrap {
       position:absolute;
@@ -49,8 +52,8 @@
       height:100%;
       background: $b-orange;
       .content {
-        font-size:32rem;
-        width:percentage(442/600);
+        font-size:20rem;
+        width:percentage(402/600);
       }
     }
   }

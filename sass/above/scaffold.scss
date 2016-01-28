@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6,
     font-size: .70em;
   }
   @media($dt) {
-    font-size: 72rem;
+    font-size: 40rem;
     line-height:(60/72);
   }
   strong {
@@ -123,7 +123,7 @@ h1, h2, h3, h4, h5, h6,
     }
     @media($dt) {
       &:after {
-        height:6rem;
+        height:(4em/40);
       }
 
     }
@@ -161,10 +161,13 @@ ol, ul {
   list-style:none;
   //backface-visibility:hidden;
   > li {
-    margin-bottom: 1em;
+    margin-bottom:.5em;
     position: relative;
     padding-left: 16rem;
   //  backface-visibility:hidden;
+  @media($dt) {
+    font-size: 16rem;
+  }
     &:before {
       position:absolute;
       display:block;

@@ -1,4 +1,4 @@
-$(document).on('click','header a', function(e){
+$(document).on('click','header a, .nav-link', function(e){
   if($(this).hasClass("menu-toggle") == true) {
     return;
   }

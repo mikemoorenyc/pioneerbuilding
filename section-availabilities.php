@@ -1,4 +1,5 @@
 <section id="availabilities" data-section-anchor="<?php echo $homeURL;?>/availabilities/">
+  <div class="dt-holder">
 <?php
 $avail = get_page_by_title('Availabilities');
 ?>
@@ -81,11 +82,12 @@ $avail = get_page_by_title('Availabilities');
         <?php
         if($status == 'enabled') {
           if($content['fp']!= '') {
-            $dtSrc = wp_get_attachment_image_src($content['fp'], 'fake-full', false);
-            $dtSrc = $dtSrc[0];
+          //  $dtSrc = wp_get_attachment_image_src($content['fp'], 'fake-full', false);
+          //  $dtSrc = $dtSrc[0];
+          $dtSrc = wp_get_attachment_url( $content['fp'], 'full' );
             ?>
 
-              <a href="<?php echo $dtSrc;?>" data-special="fp" class="modal-single clearfix">
+              <a href="<?php echo $dtSrc;?>" data-special="fp" target="_blank" class=" clearfix">
 
             <?php
           }
@@ -230,5 +232,86 @@ $avail = get_page_by_title('Availabilities');
 
 
 </div>
+
+</div>
+<?php
+$vtour =get_post_meta( $avail->ID, 'virtual-tour', true );
+if(count($vtour) > 0) {
+  ?>
+<div id="virtual-tour" class="scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject">
+  <h2>Virtual Tour</h2>
+  <ul class="no-style clearfix">
+    <?php
+    foreach($vtour as $t) {
+      ?>
+      <li class="fade-kid">
+        <div class="thumb">
+          <?php
+          $dtSrc = wp_get_attachment_image_src($t['thumb'], 'large', false);
+          $dtSrc = $dtSrc[0];
+          ?>
+          <img class="lazy-load hide" data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $dtSrc;?>" />
+        </div>
+
+        <h3><?php echo $t['title'];?></h3>
+        <ul class="links">
+          <?php
+          $linkArray = array(
+            array(
+              'High Res',
+              $t['high-res']
+            ),
+            array(
+              'Low Res',
+              $t['low-res']
+            ),
+            array(
+              'Video Tour',
+              $t['video-tour']
+            )
+          );
+          foreach($linkArray as $la) {
+            if($la[1] != '') {
+              ?>
+              <li>
+                <a href="<?php echo $la[1];?>" target="_blank" class="header-styling">
+                  <?php echo $la[0];?>
+                </a>
+              </li>
+              <?php
+            }
+          }
+          ?>
+
+
+
+        </ul>
+
+
+      </li>
+
+      <?php
+    }
+
+
+
+    ?>
+
+
+
+
+  </ul>
+
+
+
+
+
+</div>
+
+
+  <?php
+}
+
+?>
 
 </section>

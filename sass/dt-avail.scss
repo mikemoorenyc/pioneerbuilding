@@ -1,11 +1,17 @@
 @media($dt) {
   section#availabilities {
-    position:relative;
-    height: 0;
-    width:100%;
     padding: 0;
-    padding-top: percentage(940/1200);
-    backface-visibility:hidden;
+    .dt-holder {
+      position:relative;
+      height: 0;
+      width:100%;
+      padding: 0;
+      padding-top: percentage(940/1200);
+      backface-visibility:hidden;
+      > * {
+        position:absolute;
+      }
+    }
     span.pointer {
       position:absolute;
       left: percentage(292/1200);
@@ -27,7 +33,7 @@
     }
     .keys {
       display:block;
-      position:static;
+      position:static !important;
       > div {
         position:absolute;
         left: 0;
@@ -47,10 +53,10 @@
         }
       }
     }
-    > * {
+    .dt-holder > * {
       position:absolute;
     }
-    > h1 {
+    .dt-holder> h1 {
       position:absolute;
       margin: 0;
       top: 115rem;

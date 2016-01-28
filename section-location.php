@@ -34,7 +34,12 @@
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#multimedia-option100"></use>
       </svg>
     </span>
+
+
     </a>
+    <div style="position:relative;" class="scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject" data-scrollposition="bottom bottom">
+      <a class="nav-link header-styling fade-kid" href="<?php echo $homeURL;?>/future/"> View Development </a>
+    </div>
     <div id="map-key" class="clearfix scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject" data-scrollposition="bottom bottom">
       <div class="lines">
         <hr/>

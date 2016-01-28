@@ -36,7 +36,7 @@ section#building {
         width: 7rem;
         height: 7rem;
         border-radius:50%;
-        background: $b-blue;
+        background:white;
         &.current {
           background:$b-orange;
         }
@@ -57,6 +57,7 @@ section#building {
       transform: translateY(-50%);
       cursor: pointer;
       z-index:3;
+      background: white;
       &.slick-prev {
         right: auto;
         left: 0;
@@ -100,7 +101,7 @@ section#building {
   //BOTTOM SECTOIN
   .bottom-section {
     @media($dt) {
-      padding:55rem 0;
+      padding:40rem 0;
       position:relative;
     }
     .left-wrap {
@@ -121,10 +122,16 @@ section#building {
         left: 50%;
         top: 50%;
         //transform:translate(-50%,-50%);
-        width:337rem;
+        //width:337rem;
+        max-width: 100%;
       }
       h1 {
         color:white;
+        @media($dt) {
+          br {
+            display: none;
+          }
+        }
         strong {
           @media($dt) {
             border-color:white;
@@ -160,7 +167,13 @@ section#building {
         margin-bottom:1em;
         font-size: 32rem;
         line-height:1em;
+        @media($dt) {
+          margin-bottom: .5em;
+          br {
+            display: none;
 
+          }
+        }
       }
     }
   }

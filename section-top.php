@@ -39,6 +39,13 @@ $mobSrc = $mobSrc[0];
 
    <img class="hero lazy-load" data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $mobSrc;?>"/>
 
+   <div class="headline-copy">
+     <h1>
+       THE MOST<br/> ACCESIBLE<br/> BUILDING IN<br/> BROOKLYN
+     </h1>
+
+   </div>
+
   </div>
 
 

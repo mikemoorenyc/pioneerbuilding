@@ -1,0 +1,81 @@
+#virtual-tour {
+  position: relative !important;
+//  margin-top: -20rem;
+  margin-top: 30rem;
+  @media($dt) {
+    margin-top: -30rem;
+  }
+  > h2 {
+    background: $b-orange;
+    color: white;
+    text-align: center;
+    font-size: 30rem;
+    padding: (10em/30) 0;
+    @media($dt) {
+      font-size:40rem;
+      padding: (25em/40) 0 (20em/40) 0;
+    }
+  }
+  > ul {
+    @media($dt) {
+      padding: 35rem 0 45rem;
+      text-align: center;
+      letter-spacing:-4rem;
+    }
+    > li {
+      text-align: center;
+      margin-top: 30rem;
+      letter-spacing: normal;
+      @media($dt) {
+        display:inline-block;
+        vertical-align: top;
+        width:percentage(350/1200);
+        margin: 0 percentage(16/1200);
+      }
+      .thumb {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: percentage(250/350);
+        background-position: center center;
+        background-size: cover;
+
+      }
+      > h3 {
+
+        margin-top: 10rem;
+        font-size: 30rem;
+
+      }
+      .links {
+        letter-spacing: -4rem;
+        margin-top: 5rem;
+        > li {
+          display:inline-block;
+          vertical-align: top;
+          letter-spacing:normal;
+          padding-left: 10rem;
+          margin-left:10rem;
+          border-left:3px solid $b-blue;
+          line-height: 1;
+          @media($dt) {
+            font-size:20rem;
+          }
+          &:first-child {
+            margin: 0;
+            padding: 0;
+            border: 0;
+          }
+          a {
+            color:$b-blue;
+            text-align: uppercase;
+            transition: color $ts;
+            &:hover {
+              color:$b-orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}

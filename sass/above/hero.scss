@@ -1,5 +1,39 @@
 #hero-image {
+  position: relative;
   img {
     width: 100%;
+  }
+  .headline-copy {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(black,.33);
+    @media($dt) {
+      background:none;
+    }
+    h1 {
+      //text-align: center;
+      position:absolute;
+      left: 0%;
+      top:0%;
+      width: 100%;
+      text-shadow: 5rem 5rem 2rem rgba(black,.3);
+    //  transform: translate(-50%,-50%);
+      color:white;
+      font-size: 40rem;
+      line-height: (80em/92);
+      padding: 42rem 0 0 42rem;
+
+      @media($dt) {
+        font-size: 92rem;
+        color:$b-orange;
+        br {
+          display: block;
+        }
+      }
+      opacity: 0;
+    }
   }
 }

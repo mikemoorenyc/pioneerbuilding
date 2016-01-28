@@ -16,11 +16,12 @@ section#future {
         background: url(#{$imgDir}/future-dt-bg.png) bottom center no-repeat;
         background-size: 100% auto;
         padding: 20rem 20rem 40rem 20rem;
+        min-height:410rem;
       }
       h2 {
         margin-bottom:.5em;
         @media($dt) {
-          font-size:36rem;
+          font-size:30rem;
           margin-bottom:.75em;
           width: 155rem;
           br {
@@ -28,6 +29,7 @@ section#future {
           }
           strong {
             border-width:4rem;
+            border: 0;
             &:after {
               height:.12em;
             }
@@ -40,12 +42,12 @@ section#future {
           font-size: 30rem;
           color: $b-blue;
           @media($dt) {
-            margin-bottom:12rem;
+            margin-bottom:15rem;
           }
           h3 {
             font-size:36rem;
             @media($dt) {
-              font-size:26.8rem;
+              font-size:24rem;
             }
           }
           h4 {
@@ -53,7 +55,7 @@ section#future {
             line-height:normal;
             text-transform:none;
             @media($dt) {
-              font-size:16.75rem;
+              font-size:16rem;
             }
           }
           &:last-child {
