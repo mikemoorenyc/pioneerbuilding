@@ -42,6 +42,10 @@ $mobSrc = $mobSrc[0];
    <div class="headline-copy">
      <h1>
        THE MOST<br/> ACCESIBLE<br/> BUILDING IN<br/> <strong>BROOKLYN</strong>
+       <div class="sub">
+         Transit Access<br/>
+         Within 3 min walk
+       </div>
      </h1>
 
    </div>

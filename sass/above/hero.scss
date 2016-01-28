@@ -35,6 +35,18 @@
       padding: 42rem 0 0 42rem;
       opacity: 0;
       transition: opacity $ts;
+      .sub {
+        margin-top: 15rem;
+        font-size: 30rem;
+        line-height:1;
+        @media($dt) {
+          font-size:40rem;
+          margin-top:25rem;
+        }
+      }
+      strong:after {
+        background:white;
+      }
       &.__activated {
         opacity: 1;
       }
@@ -43,6 +55,7 @@
         color:$b-orange;
         text-shadow: 5rem 5rem 2rem rgba(black,.3);
         strong:after {
+          background: $b-orange;
           box-shadow: 5rem 5rem 2rem rgba(black,.3);
         }
         br {
