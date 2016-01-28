@@ -41,7 +41,7 @@ $mobSrc = $mobSrc[0];
 
    <div class="headline-copy">
      <h1>
-       THE MOST<br/> ACCESIBLE<br/> BUILDING IN<br/> BROOKLYN
+       THE MOST<br/> ACCESIBLE<br/> BUILDING IN<br/> <strong>BROOKLYN</strong>
      </h1>
 
    </div>

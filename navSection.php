@@ -5,7 +5,7 @@ $navArray = array(
   array('building', 'building96'),
   array("availabilities", 'layer11'),
   array('location','pin71'),
-  array("future",'clock125'),
+  array("developments",'clock125'),
   array("contact",'at5')
 );
 

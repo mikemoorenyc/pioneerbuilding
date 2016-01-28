@@ -1,4 +1,4 @@
-<section id="future" data-section-anchor="<?php echo $homeURL;?>/future/">
+<section id="future" data-section-anchor="<?php echo $homeURL;?>/developments/">
   <?php
   $future = get_page_by_title('Future');
   $content = $stats = get_post_meta( $future->ID, 'future-content', true );

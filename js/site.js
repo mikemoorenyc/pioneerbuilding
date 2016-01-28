@@ -130,11 +130,15 @@ function siteInit() {
     setTimeout(function(){
       $('html').removeClass("__site-loading").addClass("__site-loaded");
       $('#pre-loader').remove();
-      $('#hero-image .headline-copy h1').animate({'opacity':1}, globals.ts, function(){
+      /*$('#hero-image .headline-copy h1').animate({'opacity':1}, globals.ts, function(){
         setTimeout(function(){
           $('#hero-image .headline-copy').fadeOut(globals.ts);
         },2500);
-      });
+      });*/
+      $('#hero-image .headline-copy h1').addClass('__activated');
+      setTimeout(function(){
+        $('#hero-image .headline-copy').addClass('__over');
+      },2500+globals.ts);
     },globals.ts);
   });
 
