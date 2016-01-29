@@ -12,6 +12,11 @@ section#building {
 
   }
   .header-1 {
+    strong:after {
+      @media($dt-max) {
+        display:none !important;
+      }
+    }
     @media($dt) {
       padding:0;
       position: absolute;

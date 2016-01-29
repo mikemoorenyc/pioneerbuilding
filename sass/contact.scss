@@ -3,7 +3,7 @@ section#contact {
   //color:white;
   padding: 60rem $mob-margin 40rem $mob-margin;
   @media($dt) {
-    padding:55rem 25rem 40rem 110rem;
+    padding:55rem percentage(45/1200) 40rem percentage(110/1200);
   }
   a {
     color:white;
@@ -11,7 +11,8 @@ section#contact {
   .main-content {
     @media($dt) {
       float:left;
-      width: percentage(765/1065);
+      width: percentage(760/1045);
+      padding-right: 10rem;
     }
     .heading {
       h2 {
@@ -39,8 +40,10 @@ section#contact {
       line-height:1em;
       @media($dt) {
         float:left;
-        margin: 0 60rem 20rem 0;
-
+        margin: 0 0rem 20rem 60rem;
+        &:nth-child(3n+1) {
+          margin-left: 0;
+        }
 
       }
       &:last-child {
@@ -94,7 +97,7 @@ section#contact {
       float:right;
       position:static;
       padding-top:60rem;
-      width: percentage((1065 - 765)/1065);
+      width: percentage((1045 - 760)/1045);
       text-align:left;
     }
     > li {
@@ -105,6 +108,9 @@ section#contact {
         margin:0 25rem 40rem 0;
         display:block;
         margin: 0 0 25rem 0;
+        img {
+          margin: 0;
+        }
       }
       a {
         display:block;
