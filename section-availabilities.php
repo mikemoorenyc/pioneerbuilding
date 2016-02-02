@@ -34,7 +34,7 @@ $avail = get_page_by_title('Availabilities');
   </h1>
   <div class="dt-highlights mob-hide">
     <?php
-    for($i = 10; $i >1; $i--) {
+    for($i = 10; $i >0; $i--) {
       ?>
       <div class="overlay fl-<?php echo $i;?>" data-fl="<?php echo $i;?>"></div>
       <?php

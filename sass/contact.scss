@@ -104,16 +104,50 @@ section#contact {
       display:inline-block;
       vertical-align:middle;
       margin: 0 6rem 12rem 6rem ;
+      img {
+        width: auto;
+      }
       @media($dt) {
-        margin:0 25rem 40rem 0;
         display:block;
-        margin: 0 0 25rem 0;
+        margin: 0;
         img {
           margin: 0;
         }
       }
       a {
         display:block;
+      }
+      &.cushman {
+        img {
+          height: 23rem;
+          @media($dt) {
+            height: 33rem;
+          }
+        }
+      }
+      &.blt {
+        @media($dt) {
+          margin-top: 10rem;
+          position: relative;
+          left: -17rem;
+        }
+        img {
+          height: 25rem;
+          @media($dt) {
+            height: 39rem;
+          }
+        }
+      }
+      &.quinlan {
+        @media($dt) {
+          margin-top:50rem;
+        }
+        img {
+          height:32rem;
+          @media($dt) {
+            height:44rem;
+          }
+        }
       }
     }
   }

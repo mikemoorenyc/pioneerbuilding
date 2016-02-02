@@ -107,6 +107,9 @@
         &.fl-7,&.fl-6,&.fl-4 {
           height:38rem;
         }
+        &.fl-1 {
+          margin-top: 13rem;
+        }
       }
     }
     ul.avail-list {
@@ -124,7 +127,24 @@
         visibility:hidden;
       }
       >li.fl-1 {
-        display:none;
+        //display:none;
+        margin-top: 13rem;
+
+        span {
+          display:none !important;
+        }
+        span.view {
+          display:block !important;
+          background:white;
+          padding:0;
+          position:absolute;
+          left: 918rem;
+          height: 50rem;
+          line-height: 50rem;
+          top: -3.5rem;
+          padding-right: 10rem;
+          padding-left:8rem;
+        }
       }
       > li.fl-10, li.fl-10 > a {
         height:33rem;
