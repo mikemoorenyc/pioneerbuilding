@@ -3,12 +3,22 @@ footer {
   color: $b-grey;
   font-family: $din;
   padding: 11rem $mob-margin;
+  > .byline {
+    margin-top: 5rem;
+    display:block;
+  }
   @media($dt) {
     padding: 10rem 70rem 10rem 110rem;
 
     > * {
       float:left;
       width: 50%;
+    }
+    >.legal {
+      width: 75%;
+    }
+    > a.byline {
+      width: 25%;
     }
     a {
       text-align:right;

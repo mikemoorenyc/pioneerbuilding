@@ -1,4 +1,32 @@
 section#contact {
+  img {
+    &.logo {
+      width: auto;
+    }
+    &.cushman {
+      height: 23rem;
+      @media($dt) {
+        height: 33rem;
+      }
+    }
+    &.blt {
+      width: auto;
+      height: 25rem;
+      position: relative;
+
+      @media($dt) {
+        height: 39rem;
+        left:-15rem;
+      }
+    }
+    &.quinlan {
+
+      height:32rem;
+      @media($dt) {
+        height:44rem;
+      }
+    }
+  }
   background:$b-blue;
   //color:white;
   padding: 60rem $mob-margin 40rem $mob-margin;
@@ -76,10 +104,20 @@ section#contact {
       }
     }
     a {
+      display:block;
+      margin-bottom: 20rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
       font-family: $din;
       font-size: 18rem;
-      display:inline-block;
-
+      @media($dt) {
+        display:inline-block;
+        margin: 0 25rem 0 0;
+      }
+      img {
+        margin: 0 0 5rem 0;
+      }
     }
   }
   .bottom-logos {
@@ -118,12 +156,7 @@ section#contact {
         display:block;
       }
       &.cushman {
-        img {
-          height: 23rem;
-          @media($dt) {
-            height: 33rem;
-          }
-        }
+
       }
       &.blt {
         @media($dt) {
@@ -131,23 +164,13 @@ section#contact {
           position: relative;
           left: -17rem;
         }
-        img {
-          height: 25rem;
-          @media($dt) {
-            height: 39rem;
-          }
-        }
+
       }
       &.quinlan {
         @media($dt) {
           margin-top:50rem;
         }
-        img {
-          height:32rem;
-          @media($dt) {
-            height:44rem;
-          }
-        }
+
       }
     }
   }

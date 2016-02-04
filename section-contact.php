@@ -34,7 +34,17 @@ $contact = get_page_by_title('Contact');
   <div class="ownership">
     <h1>Ownership</h1>
 
-    <a href="http://www.quinlandev.com" target="_blank">www.quinlandev.com</a> &nbsp;&nbsp; <a href="http://www.bltoffice.com" target="_blank">www.bltoffice.com</a>
+    <a href="http://www.quinlandev.com" target="_blank">
+      <img class="lazy-load quinlan logo" data-mob="<?php echo $siteDir;?>/assets/imgs/logo-quin-large.png"data-dt="<?php echo $siteDir;?>/assets/imgs/logo-quin-large.png" alt="Quinlan" />
+
+      <span class="copy">www.quinlandev.com</span>
+    </a>
+
+    <a href="http://www.bltoffice.com" target="_blank">
+      <img class="lazy-load blt logo" data-mob="<?php echo $siteDir;?>/assets/imgs/logo-blt-large.png"data-dt="<?php echo $siteDir;?>/assets/imgs/logo-blt-large.png" alt="BLT" />
+
+      <span class="copy">www.bltoffice.com</span>
+    </a>
 
 
   </div>
@@ -43,17 +53,10 @@ $contact = get_page_by_title('Contact');
 
 <ul class="bottom-logos no-style">
   <li class="cushman">
-    <img class="lazy-load" data-mob="<?php echo $siteDir;?>/assets/imgs/logo-cush-big.png"data-dt="<?php echo $siteDir;?>/assets/imgs/logo-cush-big.png" alt="Cushman &amp; Wakefield" />
+    <img class="lazy-load cushman logo" data-mob="<?php echo $siteDir;?>/assets/imgs/logo-cush-big.png"data-dt="<?php echo $siteDir;?>/assets/imgs/logo-cush-big.png" alt="Cushman &amp; Wakefield" />
 
   </li>
-  <li class="quinlan">
-    <img class="lazy-load" data-mob="<?php echo $siteDir;?>/assets/imgs/logo-quin-large.png"data-dt="<?php echo $siteDir;?>/assets/imgs/logo-quin-large.png" alt="Quinlan" />
 
-  </li>
-  <li class="blt">
-    <img class="lazy-load" data-mob="<?php echo $siteDir;?>/assets/imgs/logo-blt-large.png"data-dt="<?php echo $siteDir;?>/assets/imgs/logo-blt-large.png" alt="BLT" />
-
-  </li>
 
 
 </ul>

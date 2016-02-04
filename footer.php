@@ -2,7 +2,10 @@
 
 <footer class="clearfix">
 <div class="legal">
-Pioneer Building | Legal Copy to be placed here
+Pioneer Building <br/>
+<span class="sm" style="line-height:1em; display:block;">
+&copy;<?php echo date('Y');?> Cushman &amp; Wakefield  NO WARRANTY OR REPRESENTATION, EXPRESS OR IMPLIED, IS MADE TO THE ACCURACY OR COMPLETENESS OF THE INFORMATION CONTAINED HEREIN, AND SAME IS SUBMITTED SUBJECT TO ERRORS, OMISSIONS, CHANGE OF PRICE, RENTAL OR OTHER CONDITIONS, WITHDRAWAL WITHOUT NOTICE, AND TO ANY SPECIAL LISTING CONDITIONS IMPOSED BY THE PROPERTY OWNER(S). AS APPLICABLE, WE MAKE NO REPRESENTATION AS TO THE CONDITION OF THE PROPERTY (OR PROPERTIES) IN QUESTION.
+</span>
 </div>
 
 <a href="http://realestatearts.com" target="_blank" class="byline">
