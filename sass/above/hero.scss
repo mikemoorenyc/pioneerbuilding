@@ -3,7 +3,56 @@
   img {
     width: 100%;
   }
-  .headline-copy {
+  .headline-dt-copy {
+    display:none;
+    @media($dt) {
+      display:block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      //pointer-events: none;
+      h1 {
+        font-size: 92rem;
+        line-height: (80em/92);
+        padding: 42rem 0 0 42rem;
+        text-shadow: 5rem 5rem 2rem rgba(black,.3);
+        strong:after {
+          box-shadow: 5rem 5rem 2rem rgba(black,.3);
+        }
+        .walk {
+          font-size:40rem;
+          margin-top:25rem;
+          line-height:1;
+          display:none;
+        }
+        br {
+          display: block;
+        }
+        .subways {
+          margin-top: 15rem;
+          width: 300rem;
+          color:white;
+          font-size: 15.52rem;
+          font-family: $serif;
+          line-height:1;
+          text-transform: none;
+          display:none;
+          .item {
+            float: left;
+            margin: 0 18rem 10rem 0;
+            > img {
+              margin: 5rem 0 0 0;
+              height: 20rem;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  .headline-mobile-copy {
     position: absolute;
     left: 0;
     top: 0;
@@ -12,14 +61,10 @@
     background: rgba(black,.33);
     transition: opacity $ts;
     pointer-events: none;
-    @media($dt) {
-      background:none;
-    }
+
     &.__over {
       opacity: 0;
-      @media($dt) {
-        opacity: 1;
-      }
+
     }
     h1 {
       //text-align: center;
@@ -39,10 +84,7 @@
         margin-top: 15rem;
         font-size: 30rem;
         line-height:1;
-        @media($dt) {
-          font-size:40rem;
-          margin-top:25rem;
-        }
+
       }
       strong:after {
         background:white;
@@ -50,18 +92,7 @@
       &.__activated {
         opacity: 1;
       }
-      @media($dt) {
-        font-size: 92rem;
-        color:$b-orange;
-        text-shadow: 5rem 5rem 2rem rgba(black,.3);
-        strong:after {
-          background: $b-orange;
-          box-shadow: 5rem 5rem 2rem rgba(black,.3);
-        }
-        br {
-          display: block;
-        }
-      }
+
 
     }
   }

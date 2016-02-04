@@ -135,9 +135,20 @@ function siteInit() {
           $('#hero-image .headline-copy').fadeOut(globals.ts);
         },2500);
       });*/
-      $('#hero-image .headline-copy h1').addClass('__activated');
+      $('#hero-image .headline-dt-copy .walk').fadeIn(globals.ts, function(){
+        setTimeout(function(){
+          $('#hero-image .headline-dt-copy .walk').fadeOut(globals.ts, function(){
+            $('#hero-image .headline-dt-copy .subways').fadeIn(globals.ts, function(){
+              setTimeout(function(){
+                $('#hero-image .headline-dt-copy .subways').fadeOut(globals.ts);
+              },2500);
+            });
+          });
+        },2000);
+      });
+      $('#hero-image .headline-mobile-copy h1').addClass('__activated');
       setTimeout(function(){
-        $('#hero-image .headline-copy').addClass('__over');
+        $('#hero-image .headline-mobile-copy').addClass('__over');
       },2500+globals.ts);
     },globals.ts);
   });

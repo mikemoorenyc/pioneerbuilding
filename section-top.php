@@ -39,7 +39,44 @@ $mobSrc = $mobSrc[0];
 
    <img class="hero lazy-load" data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $mobSrc;?>"/>
 
-   <div class="headline-copy">
+   <div class="headline-dt-copy mob-hide">
+     <h1>
+       THE MOST<br/> ACCESSIBLE<br/> BUILDING IN<br/> <strong>BROOKLYN</strong>
+       <div class="walk">
+         Transit Access<br/>
+         Within 3 min walk
+       </div>
+       <div class="subways clearfix">
+
+         <?php
+         $subways = array(
+           array('Atlantic Ave-Barclays Ctr', 'tran-atlantic.png'),
+           array('Nevins St', 'trans-nevins.png'),
+           array('Lafayette Av', 'trans-layfayette.png'),
+           array('Hoyt-Schermerhorn St', 'trans-hoyt.png'),
+           array('Fulton St', 'trans-fulton.png'),
+           array('Atlantic Terminal', 'trans-mta.png'),
+         );
+         foreach($subways as $s) {
+           ?>
+           <div class="item">
+             <?php echo $s[0];?>
+             <img src="<?php echo $siteDir;?>/assets/imgs/<?php echo $s[1];?>" />
+           </div>
+
+           <?php
+         }
+
+         ?>
+
+
+       </div>
+     </h1>
+
+
+   </div>
+
+   <div class="headline-mobile-copy dt-hide">
      <h1>
        THE MOST<br/> ACCESSIBLE<br/> BUILDING IN<br/> <strong>BROOKLYN</strong>
        <div class="sub">
@@ -49,6 +86,8 @@ $mobSrc = $mobSrc[0];
      </h1>
 
    </div>
+
+
 
   </div>
 
