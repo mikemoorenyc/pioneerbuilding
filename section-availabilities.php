@@ -119,13 +119,15 @@ $avail = get_page_by_title('Availabilities');
 
 <div class="bottom-section clearfix">
     <?php
-    $fits = get_post_meta( $avail->ID, 'test-fit-gallery', true );
+    //$fits = get_post_meta( $avail->ID, 'test-fit-gallery', true );
+    $fits = get_post_meta( $avail->ID, 'test-fits-new', true );
     $typeArray = array();
     if(count($fits) > 0) {
 
       ?>
       <div class="test-fits">
         <?php
+        /*
         foreach($fits as $f) {
           if(in_array($f['type'], $typeArray) == false) {
             array_push($typeArray,$f['type']);
@@ -137,10 +139,24 @@ $avail = get_page_by_title('Availabilities');
         } else {
           $aCount = count($typeArray);
         }
+        */
         ?>
-        <ul class="tf-list no-style count-<?php echo $aCount;?>">
+        <ul class="tf-list no-style ">
+          <?php
+
+          foreach($fits as $f) {
+            ?>
+
+            <li>
+              <a target="_blank" href="<?php echo wp_get_attachment_url( $f['pdf'], 'full' );?>" class=" header-styling"><?php echo $f['name'];?></a>
+            </li>
+            <?php
+          }
+
+          ?>
 
           <?php
+          /*
           foreach($typeArray as $ta) {
             ?>
             <li>
@@ -148,12 +164,12 @@ $avail = get_page_by_title('Availabilities');
             </li>
             <?php
           }
-
+          */
           ?>
 
         </ul>
 
-        <div class="fit-gals hide galleries" data-galtype="fit">
+    <!--    <div class="fit-gals hide galleries" data-galtype="fit">
           <?php
           foreach($typeArray as $ta) {
             ?>
@@ -192,7 +208,7 @@ $avail = get_page_by_title('Availabilities');
 
           ?>
 
-        </div>
+        </div>-->
 
       </div>
       <?php

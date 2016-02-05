@@ -4,55 +4,76 @@
     width: 100%;
   }
   .headline-dt-copy {
-    display:none;
-    @media($dt) {
-      display:block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      //pointer-events: none;
-      h1 {
-        font-size: 92rem;
-        line-height: (80em/92);
-        padding: 42rem 0 0 42rem;
-        text-shadow: 5rem 5rem 2rem rgba(black,.3);
-        strong:after {
-          box-shadow: 5rem 5rem 2rem rgba(black,.3);
-        }
-        .walk {
-          font-size:40rem;
-          margin-top:25rem;
-          line-height:1;
-          display:none;
-        }
-        br {
-          display: block;
-        }
-        .subways {
+
+    display:block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    //pointer-events: none;
+
+    @media($dt-max) {
+      background: linear-gradient(to right, rgba(black,.75) 0%, rgba(black,.75) 20%, rgba(black,0) 80%);
+    }
+    h1 {
+      font-size: 92rem;
+      line-height: (80em/92);
+      padding: 42rem 0 0 42rem;
+      text-shadow: 5rem 5rem 2rem rgba(black,.3);
+      @media($dt-max) {
+        padding: 24rem 0 0 24rem;
+        font-size: 40rem;
+      }
+      strong:after {
+        box-shadow: 5rem 5rem 2rem rgba(black,.3);
+      }
+      .walk {
+        font-size:40rem;
+        margin-top:25rem;
+        line-height:1;
+        display:none;
+        @media($dt-max) {
           margin-top: 15rem;
-          width: 300rem;
-          color:white;
-          font-size: 15.52rem;
-          font-family: $serif;
-          line-height:1;
-          text-transform: none;
-          display:none;
-          .item {
-            float: left;
-            margin: 0 18rem 10rem 0;
+          font-size: 30rem;
+        }
+      }
+      br {
+        display: block;
+      }
+      .subways {
+        margin-top: 15rem;
+        width: 300rem;
+        color:white;
+        font-size: 15.52rem;
+        font-family: $serif;
+        line-height:1;
+        text-transform: none;
+        display:none;
+        @media($dt-max) {
+          margin-top:15rem;
+          font-size:13rem;
+        }
+        .item {
+          float: left;
+          margin: 0 18rem 10rem 0;
+          > img {
+            margin: 5rem 0 0 0;
+            height: 20rem;
+            width: auto;
+          }
+          @media($dt-max) {
+            margin: 0 12rem 10rem 0;
             > img {
-              margin: 5rem 0 0 0;
-              height: 20rem;
-              width: auto;
+              height:18rem;
             }
           }
         }
       }
     }
+
   }
-  .headline-mobile-copy {
+/*  .headline-mobile-copy {
     position: absolute;
     left: 0;
     top: 0;
@@ -95,5 +116,5 @@
 
 
     }
-  }
+  }*/
 }

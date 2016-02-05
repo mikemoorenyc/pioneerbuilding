@@ -39,7 +39,7 @@ $mobSrc = $mobSrc[0];
 
    <img class="hero lazy-load" data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $mobSrc;?>"/>
 
-   <div class="headline-dt-copy mob-hide">
+   <div class="headline-dt-copy">
      <h1>
        THE MOST<br/> ACCESSIBLE<br/> BUILDING IN<br/> <strong>BROOKLYN</strong>
        <div class="walk">
@@ -75,7 +75,7 @@ $mobSrc = $mobSrc[0];
 
 
    </div>
-
+<!--
    <div class="headline-mobile-copy dt-hide">
      <h1>
        THE MOST<br/> ACCESSIBLE<br/> BUILDING IN<br/> <strong>BROOKLYN</strong>
@@ -86,7 +86,7 @@ $mobSrc = $mobSrc[0];
      </h1>
 
    </div>
-
+-->
 
 
   </div>
