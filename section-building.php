@@ -126,6 +126,22 @@ $building=get_page_by_title('Building');
 
       </div>
 
+      <div class="btn-holder fade-kid">
+        <?php
+        //GET AVAIL LIST
+        $avail = get_page_by_title('Availabilities');
+        $dlList = get_post_meta( $avail->ID, 'downloads', true );
+        foreach($dlList as $d) {
+          if($d['link-copy'] == 'Building Specifications') {
+            ?>
+            <a class="header-styling" href="<?php echo wp_get_attachment_url( $d['document'], 'full' );?>" target="_blank"><?php echo $d['link-copy'];?></a>
+            <?php
+          }
+        }
+        ?>
+
+      </div>
+
     </div>
 
   </div>

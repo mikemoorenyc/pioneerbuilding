@@ -27,18 +27,18 @@
     $mobSrc = wp_get_attachment_image_src($content['map-mobile'], 'large', false);
     $mobSrc = $mobSrc[0];
     ?>
-    <a class="modal-map" href="<?php echo $siteDir;?>/assets/imgs/Map-1.jpg">
+    <!--<a class="modal-map" href="<?php echo $siteDir;?>/assets/imgs/Map-1.jpg">-->
     <img data-dt="<?php echo $dtSrc;?>" data-mob="<?php echo $mobSrc;?>" class="lazy-load" alt="Locations Map"/>
-    <span class="btn-class">
+  <!--  <span class="btn-class">
       <svg>
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#multimedia-option100"></use>
       </svg>
     </span>
 
 
-    </a>
+    </a>-->
     <div style="position:relative;" class="scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject" data-scrollposition="bottom bottom">
-      <a class="nav-link header-styling fade-kid" href="<?php echo $homeURL;?>/developments/"> View Development </a>
+      <a class="map-nav-link header-styling fade-kid" href="#future .map-section"> View Recent Developments </a>
     </div>
     <div id="map-key" class="clearfix scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject" data-scrollposition="bottom bottom">
       <div class="lines">
@@ -215,5 +215,5 @@
     </div>
   </div>
 
-
+  <?php include 'section-future.php';?>
 </section>

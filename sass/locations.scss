@@ -1,15 +1,16 @@
+.map-nav-link {
+  position: absolute;
+  left: 15rem;
+  top: -55rem;
+  height: 40rem;
+  background: $b-orange;
+  line-height: 44rem;
+  padding: 0 10rem;
+  color:white;
+}
 section#location {
   .map {
-    .nav-link {
-      position: absolute;
-      left: 65rem;
-      top: -55rem;
-      height: 40rem;
-      background: $b-orange;
-      line-height: 44rem;
-      padding: 0 10rem;
-      color:white;
-    }
+
   }
   #location-gallery {
     li {

@@ -11,13 +11,13 @@ $avail = get_page_by_title('Availabilities');
       <span class="pointer">
       </span>
     </div>
-    <div class="retail">
+    <!--<div class="retail">
       <span class="copy header-styling">
         Retail &amp; Mezzanine
       </span>
       <span class="pointer">
       </span>
-    </div>
+    </div>-->
 
   </div>
   <h1 class="scroll-magic">
@@ -222,16 +222,18 @@ $avail = get_page_by_title('Availabilities');
       <ul class="downloads no-style clearfix">
         <?php
         foreach($dl as $d) {
-          $link = wp_get_attachment_url( $d['document'], 'full' );
-          ?>
-          <li>
-            <a href="<?php echo $link;?>" target="_blank" class="header-styling">
-              <?php echo $d['link-copy'];?>
-            </a>
+          if($d['link-copy']!= 'Building Specifications') {
+            $link = wp_get_attachment_url( $d['document'], 'full' );
+            ?>
+            <li>
+              <a href="<?php echo $link;?>" target="_blank" class="header-styling">
+                <?php echo $d['link-copy'];?>
+              </a>
 
 
-          </li>
-          <?php
+            </li>
+            <?php
+          }
         }
 
         ?>
@@ -302,6 +304,14 @@ if(count($vtour) > 0) {
 
 
         </ul>
+        <?php
+        if($t['asterisk-copy'] != '') {
+          ?>
+          <div class="asterisk-copy"><?php echo $t['asterisk-copy'];?></div>
+          <?php
+        }
+
+        ?>
 
 
       </li>

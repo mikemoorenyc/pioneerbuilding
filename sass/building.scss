@@ -175,6 +175,16 @@ section#building {
           }
         }
       }
+      .btn-holder {
+        margin-top:20rem;
+        //text-align:right;
+        a {
+          display:inline-block;
+          color:white;
+          background:$b-orange;
+          padding: 10rem 10rem 7rem 10rem;
+        }
+      }
     }
   }
 

@@ -48,7 +48,7 @@ globals.swaps = [
   ],
   [
     'Flatbush',
-    'Design'
+    'Downtown Brooklyn'
   ]
 ];
 
@@ -135,17 +135,23 @@ function siteInit() {
           $('#hero-image .headline-copy').fadeOut(globals.ts);
         },2500);
       });*/
-      $('#hero-image .headline-dt-copy .walk').fadeIn(globals.ts, function(){
-        setTimeout(function(){
-          $('#hero-image .headline-dt-copy .walk').fadeOut(globals.ts, function(){
-            $('#hero-image .headline-dt-copy .subways').fadeIn(globals.ts, function(){
-              setTimeout(function(){
-                $('#hero-image .headline-dt-copy .subways').fadeOut(globals.ts);
-              },2500);
+      function heroLoop() {
+        $('#hero-image .headline-dt-copy .walk').fadeIn(globals.ts, function(){
+          setTimeout(function(){
+            $('#hero-image .headline-dt-copy .walk').fadeOut(globals.ts, function(){
+              $('#hero-image .headline-dt-copy .subways').fadeIn(globals.ts, function(){
+                setTimeout(function(){
+                  $('#hero-image .headline-dt-copy .subways').fadeOut(globals.ts, function(){
+                  heroLoop();
+                  });
+                },3500);
+              });
             });
-          });
-        },2000);
-      });
+          },3000);
+        });
+      }
+      heroLoop();
+
       $('#hero-image .headline-mobile-copy h1').addClass('__activated');
       setTimeout(function(){
         $('#hero-image .headline-mobile-copy').addClass('__over');

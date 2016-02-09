@@ -131,8 +131,23 @@
         margin-top: 13rem;
 
         span {
-          display:none !important;
+          //display:none !important;
+          &.rsf {
+            position:absolute;
+            left: 0;
+            bottom: -10rem;
+            width: (14.75% + 8.75%);
+            margin-left: 0;
+          }
+          &.num {
+            width: (14.75% + 8.75%);
+            position: relative;
+            
+            text-align: right;
+
+          }
         }
+
         span.view {
           display:block !important;
           background:white;

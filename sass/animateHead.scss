@@ -1,4 +1,8 @@
 .animate-head {
+  white-space:nowrap;
+  strong {
+
+  }
   .animate-wrap {
     position:relative;
     display:inline-block;
@@ -11,6 +15,7 @@
       position: absolute;
       left: 0;
       top: 0;
+      white-space:nowrap;
       &.is-hidden {
         //transform: rotateX(180deg);
         animation: cd-rotate-1-out 1.2s;

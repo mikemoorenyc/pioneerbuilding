@@ -14,7 +14,7 @@ $sectionArray = array(
   'building',
   'availabilities',
   'location',
-  'future',
+  //'future',
   'contact'
 );
 foreach($sectionArray as $sa) {
