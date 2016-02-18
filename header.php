@@ -91,6 +91,17 @@ globals.currentPosition = '';
 <meta name="geo.position" content="40.687623;-73.979387" />
 <meta name="ICBM" content="40.687623, -73.979387" />
 
+<noscript>
+<style>
+#pre-loader {
+  display: none !important;
+  pointer-events: none;
+  width: 0px;
+  height: 0px;
+}
+</style>
+</noscript>
+
 </head>
 <div id="css-checker"></div>
 <body id="top">
