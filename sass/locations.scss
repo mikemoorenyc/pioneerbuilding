@@ -1,12 +1,16 @@
 .map-nav-link {
   position: absolute;
   left: 15rem;
-  top: -55rem;
-  height: 40rem;
+  bottom:15rem;
+  //height: 40rem;
   background: $b-orange;
-  line-height: 44rem;
-  padding: 0 10rem;
+  padding: 10rem 10rem 8rem 10rem;
   color:white;
+  max-width: calc(100% - 30rem);
+
+  &.sm {
+    font-size:.75em;
+  }
 }
 section#location {
   .map {

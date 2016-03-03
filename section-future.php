@@ -39,7 +39,7 @@
     </span>
   </a>-->
   <div style="position:relative;" class="scroll-magic generalFader" data-scrollfunction="generalFader" data-scrollvariables="theObject" data-scrollposition="bottom bottom">
-    <a class="map-nav-link header-styling fade-kid" href="#location .map"> View Neighborhood Amenities </a>
+    <a class="map-nav-link header-styling fade-kid" href="#location .map"> View Neighborhood Amenities &amp; Transportation</a>
   </div>
     <div class="copy">
       <?php echo $content['list-heading'];?>
